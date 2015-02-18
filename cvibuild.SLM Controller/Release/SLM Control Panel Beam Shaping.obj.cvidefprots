@@ -1,0 +1,32 @@
+[BeamShape_Callback]
+Class="Function"
+Prototype="int BeamShape_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[BeamType_Callback]
+Class="Function"
+Prototype="int BeamType_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[rbShapingMode_Callback]
+Class="Function"
+Prototype="int rbShapingMode_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[GeneratePhaseFromFile]
+Class="Function"
+Prototype="void GeneratePhaseFromFile(char *FilePath, int panel, int refinephase);"
+
+[LoadFile_Callback]
+Class="Function"
+Prototype="int LoadFile_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PicPattern_Callback]
+Class="Function"
+Prototype="int PicPattern_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CharacterNumber_Callback]
+Class="Function"
+Prototype="int CharacterNumber_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CharacterGo_Callback]
+Class="Function"
+Prototype="int CharacterGo_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

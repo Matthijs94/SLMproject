@@ -1,0 +1,28 @@
+[get_good]
+Class="Function"
+Prototype="struct species *get_good();"
+
+[get_bad]
+Class="Function"
+Prototype="struct species *get_bad();"
+
+[combine]
+Class="Function"
+Prototype="double combine(double u, double v, double w, double scale);"
+
+[crossover]
+Class="Function"
+Prototype="double crossover(double i, double s, double rho);"
+
+[GeneticInitialize]
+Class="Function"
+Prototype="void GeneticInitialize(int popsize, unsigned int numgenes, double maxvariance, double (*f)(double *));"
+
+[GeneticOptimize]
+Class="Function"
+Prototype="int GeneticOptimize(int NumEval, int debugpanel, int dbc1, int dbc2, int dbc3, int dbc4, int dbc5, int dbc6, int debuggraph1);"
+
+[GeneticDeinitialise]
+Class="Function"
+Prototype="void GeneticDeinitialise();"
+

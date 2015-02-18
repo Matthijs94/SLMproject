@@ -1,0 +1,156 @@
+[SLM_initialise]
+Class="Function"
+Prototype="void SLM_initialise(int Xsize, int Ysize, int SimXsize, int SimYsize, int SubSampleFactor);"
+
+[SLM_update]
+Class="Function"
+Prototype="void SLM_update(int Panel, int Canvas, int SimPanel, int SimCanvas, int pattern_updated);"
+
+[SLM_setInputIntensityGaussian]
+Class="Function"
+Prototype="void SLM_setInputIntensityGaussian(double x, double y, double sigmax, double sigmay, int subsamplefactor);"
+
+[SLM_setInputIntensityAnnular]
+Class="Function"
+Prototype="void SLM_setInputIntensityAnnular(double x, double y, double sigmax, double sigmay, int subsamplefactor);"
+
+[SLM_setInputIntensityFromCameraData]
+Class="Function"
+Prototype="void SLM_setInputIntensityFromCameraData(double x, double y, double sigmax, double sigmay, int subsamplefactor);"
+
+[SLM_setHorizTrans]
+Class="Function"
+Prototype="void SLM_setHorizTrans(double htrans);"
+
+[SLM_setVertTrans]
+Class="Function"
+Prototype="void SLM_setVertTrans(double vtrans);"
+
+[SLM_setLensPhase]
+Class="Function"
+Prototype="void SLM_setLensPhase(double xstrength, double ystrength);"
+
+[SLM_updateLensPattern]
+Class="Function"
+Prototype="void SLM_updateLensPattern();"
+
+[SLM_setLensFocalLength]
+Class="Function"
+Prototype="void SLM_setLensFocalLength(double f);"
+
+[SLM_updateFocalUnit]
+Class="Function"
+Prototype="void SLM_updateFocalUnit();"
+
+[SLM_setWavelength]
+Class="Function"
+Prototype="void SLM_setWavelength(double lambda);"
+
+[SLM_setZoom]
+Class="Function"
+Prototype="void SLM_setZoom(double zoom);"
+
+[SLM_getXres]
+Class="Function"
+Prototype="int SLM_getXres();"
+
+[SLM_getYres]
+Class="Function"
+Prototype="int SLM_getYres();"
+
+[SLM_getCanvasXres]
+Class="Function"
+Prototype="int SLM_getCanvasXres();"
+
+[SLM_getCanvasYres]
+Class="Function"
+Prototype="int SLM_getCanvasYres();"
+
+[SLM_getLensFocalLength]
+Class="Function"
+Prototype="double SLM_getLensFocalLength();"
+
+[SLM_getWavelength]
+Class="Function"
+Prototype="double SLM_getWavelength();"
+
+[SLM_getFocalUnitX]
+Class="Function"
+Prototype="double SLM_getFocalUnitX();"
+
+[SLM_getFocalUnitY]
+Class="Function"
+Prototype="double SLM_getFocalUnitY();"
+
+[SLM_AmplitudeModulation]
+Class="Function"
+Prototype="double SLM_AmplitudeModulation(double phase);"
+
+[SLM_setAmplitudeModulation]
+Class="Function"
+Prototype="void SLM_setAmplitudeModulation(double amplmod);"
+
+[SLM_setBias]
+Class="Function"
+Prototype="void SLM_setBias(int bias);"
+
+[SLM_setLensCoordinates]
+Class="Function"
+Prototype="void SLM_setLensCoordinates(double lensX, double lensY);"
+
+[SLM_getPhase]
+Class="Function"
+Prototype="double *SLM_getPhase();"
+
+[SLM_setPhase]
+Class="Function"
+Prototype="void SLM_setPhase(double *src);"
+
+[SLM_Clear]
+Class="Function"
+Prototype="void SLM_Clear();"
+
+[SLM_getZoom]
+Class="Function"
+Prototype="double SLM_getZoom();"
+
+[SLM_getAmplitudeModulation]
+Class="Function"
+Prototype="double SLM_getAmplitudeModulation();"
+
+[SLM_getCurrentPattern]
+Class="Function"
+Prototype="int SLM_getCurrentPattern();"
+
+[SLM_getSignalWindowParameters]
+Class="Function"
+Prototype="void SLM_getSignalWindowParameters(int *wx, int *wy, int *wxsize, int *wysize);"
+
+[SLM_getSignalWindow]
+Class="Function"
+Prototype="double *SLM_getSignalWindow();"
+
+[SLM_getLxSLM]
+Class="Function"
+Prototype="double SLM_getLxSLM();"
+
+[SLM_getLySLM]
+Class="Function"
+Prototype="double SLM_getLySLM();"
+
+[SLM_setAberrationCorrection]
+Class="Function"
+Prototype="void SLM_setAberrationCorrection(double *ZernikeCoefficients, int Nz, int mx, int my);"
+
+[SLM_getZernikeAberrationCorrection]
+Class="Function"
+Prototype="double *SLM_getZernikeAberrationCorrection();"
+
+[SLM_setInputIntensityCameraData]
+Class="Function"
+Prototype="void SLM_setInputIntensityCameraData(unsigned char *camdata, int camxres, int camyres, int camxmin, int camymin, int camNx, int camNy);"
+
+[SLM_setDebugPlottingControls]
+Class="Function"
+Prototype="void SLM_setDebugPlottingControls(int dbgpanel, int dbgc1, int dbgc2, int dbgc3, int dbgc4, int dbgc5, int dbgc6, int dbgg1, int dbgg2, int dbgg3);"
+

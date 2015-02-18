@@ -1,0 +1,56 @@
+[UpdateFeedbackData]
+Class="Function"
+Prototype="void UpdateFeedbackData();"
+
+[UpdateFeedbackCanvas]
+Class="Function"
+Prototype="void UpdateFeedbackCanvas(int Panel, int Canvas);"
+
+[UpdateFeedbackWindow_Callback]
+Class="Function"
+Prototype="int UpdateFeedbackWindow_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[rbFeedbackToggle_Callback]
+Class="Function"
+Prototype="int rbFeedbackToggle_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[RefinePhase_Callback]
+Class="Function"
+Prototype="int RefinePhase_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[FixSignal_Callback]
+Class="Function"
+Prototype="int FixSignal_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseOption_Callback]
+Class="Function"
+Prototype="int PhaseOption_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ClearCorr_Callback]
+Class="Function"
+Prototype="int ClearCorr_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[minFour]
+Class="Function"
+Prototype="double minFour(double *a);"
+
+[maxFour]
+Class="Function"
+Prototype="double maxFour(double *a);"
+
+[constructCameraSignalTransformationMatrix]
+Class="Function"
+Prototype="void constructCameraSignalTransformationMatrix(int NxFrom, int NyFrom, int NxTo, int NyTo, int OffsetX, int OffsetY);"
+
+[transformCameraSignal]
+Class="Function"
+Prototype="void transformCameraSignal(double *SigFrom, int NxFrom, int NyFrom, double *SigTo, int NxTo, int NyTo);"
+
+[RunBatchFeedback]
+Class="Function"
+Prototype="int RunBatchFeedback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[itcalc]
+Class="Function"
+Prototype="int itcalc(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

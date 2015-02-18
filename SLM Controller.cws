@@ -1,0 +1,461 @@
+[Workspace Header]
+Version = 1300
+Pathname = "/c/Program Files (x86)/SLM Controller UvA/SLM Controller.cws"
+CVI Dir = "/c/program files (x86)/national instruments/cvi2013"
+CVI Shared Dir = "/C/Program Files (x86)/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/ProgramData/National Instruments/CVI2013"
+CVI Pub Global Dir = "/C/ProgramData/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files (x86)/IVI Foundation/IVI"
+IVI Standard Root 64-bit Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/C/Program Files (x86)/IVI Foundation/VISA/winnt"
+VXIplug&play Framework 64-bit Dir = "/C/Program Files/IVI Foundation/VISA/win64"
+Number of Projects = 1
+Active Project = 1
+Project 0001 = "SLM Controller.prj"
+Drag Bar Left = 344
+Window Top = 172
+Window Left = 190
+Window Bottom = 886
+Window Right = 1823
+Maximized = False
+Maximized Children = True
+Max32 Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win At Start = True
+Bring Up Err Win For Errors = False
+Save Changes Before Running = "Always"
+Save Changes Before Compiling = "Always"
+Hide Windows = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 10
+Window Confinement Region Enabled = True
+MainColumnWidth = 327
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+
+[Project Header 0001]
+Version = 1300
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Debug"
+Warn User If Debugging Release = 0
+Batch Build Release = False
+Batch Build Debug = False
+
+[File 0001]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_genetic.c"
+File Type = "CSource"
+Disk Date = 3431494440
+In Projects = "1,"
+Window Top = 23
+Window Z-Order = 9
+Source Window State = "1,0,0,0,0,0,0,0,0,70,0,0,0,0,0,28,43,0,64,24,400,600,1,0,"
+
+[File 0002]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel general.c"
+File Type = "CSource"
+Disk Date = 3474564564
+In Projects = "1,"
+Window Top = 25
+Window Left = 6
+Window Z-Order = 4
+Source Window State = "1,330,330,330,8,17,17,0,0,82,0,0,0,0,0,13,394,0,409,20,193,699,1,0,"
+
+[File 0003]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel.h"
+File Type = "Include"
+Disk Date = 3473786578
+In Projects = "1,"
+Window Top = 48
+Window Left = 18
+Window Z-Order = 10
+Source Window State = "1,112,112,112,5,32,32,0,0,82,0,0,0,0,0,24,95,0,113,61,336,699,1,0,"
+
+[File 0004]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel.uir"
+File Type = "User Interface Resource"
+Disk Date = 3473837678
+In Projects = "1,"
+Window Top = 25
+Window Left = 6
+Window Height = 349
+Window Width = 699
+Window Z-Order = 7
+
+[File 0005]
+Path = "/c/Users/Admini/Desktop/SLM/SLM Controller UvA/SLM Control Panel.c"
+File Type = "CSource"
+Disk Date = 3473789582
+In Projects = ""
+Window Top = 23
+Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,50,13,400,600,1,0,"
+Breakpoint 0001 = "52,0,enabled,"
+Breakpoint 0002 = "55,0,enabled,"
+
+[File 0006]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel.c"
+File Type = "CSource"
+Disk Date = 3473789582
+In Projects = "1,"
+Window Top = 23
+Window Z-Order = 5
+Source Window State = "1,0,0,0,0,0,0,0,0,70,0,0,0,0,0,28,42,0,51,0,400,600,1,0,"
+
+[File 0007]
+Path = "/c/Program Files (x86)/SLM Controller UvA/FlyCapture2/FlyCapture2_C.h"
+File Type = "Include"
+Disk Date = 3479141602
+In Projects = "1,"
+Window Top = 25
+Window Left = 6
+Window Z-Order = 8
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,0,0,0,0,271,683,1,0,"
+
+[File 0008]
+Path = "/c/Program Files (x86)/National Instruments/CVI2013/include/userint.h"
+File Type = "Include"
+Disk Date = 3464691574
+In Projects = ""
+Window Top = 48
+Window Left = 18
+Window Z-Order = 6
+Source Window State = "1,2626,2626,2626,16,25,25,0,3,80,0,0,0,0,0,19,2620,0,2626,16,271,683,1,0,"
+
+[File 0009]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_aberrations.c"
+File Type = "CSource"
+Disk Date = 3438587340
+In Projects = "1,"
+Window Top = 48
+Window Left = 18
+Window Z-Order = 3
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,0,0,0,0,271,683,1,0,"
+
+[File 0010]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_general.c"
+File Type = "CSource"
+Disk Date = 3486449160
+In Projects = "1,"
+Window Top = 25
+Window Left = 6
+Window Z-Order = 1
+Source Window State = "1,0,0,0,0,0,0,0,0,156,0,0,0,0,0,30,42,0,68,20,271,683,1,0,"
+
+[File 0011]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_patterns.c"
+File Type = "CSource"
+Disk Date = 3458628780
+In Projects = "1,"
+Window Top = 71
+Window Left = 30
+Window Z-Order = 2
+Source Window State = "1,0,0,0,0,0,0,0,0,80,0,0,0,0,0,19,587,0,618,62,271,683,1,0,"
+
+[File 0012]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel Calibration.c"
+File Type = "CSource"
+Disk Date = 3473786608
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0013]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel Feedback.c"
+File Type = "CSource"
+Disk Date = 3473786590
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0014]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel Measurement.c"
+File Type = "CSource"
+Disk Date = 3468346136
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0015]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Beam Shaping.c"
+File Type = "CSource"
+Disk Date = 3468346204
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0016]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Client Mode.c"
+File Type = "CSource"
+Disk Date = 3449481840
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0017]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Feedback.c"
+File Type = "CSource"
+Disk Date = 3473786626
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0018]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel General.c"
+File Type = "CSource"
+Disk Date = 3472657832
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0019]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Load Save.c"
+File Type = "CSource"
+Disk Date = 3472658446
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0020]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Phase Error.c"
+File Type = "CSource"
+Disk Date = 3468346310
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0021]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel SH.c"
+File Type = "CSource"
+Disk Date = 3437981100
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0022]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Spot Array.c"
+File Type = "CSource"
+Disk Date = 3468346348
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0023]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Pixel Panel.c"
+File Type = "CSource"
+Disk Date = 3472657256
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0024]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Simulation Panel.c"
+File Type = "CSource"
+Disk Date = 3468346502
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0025]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_characterisation.c"
+File Type = "CSource"
+Disk Date = 3468346528
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0026]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_simulation.c"
+File Type = "CSource"
+Disk Date = 3468346598
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0027]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_support.c"
+File Type = "CSource"
+Disk Date = 3472658122
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0028]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_Zernike.c"
+File Type = "CSource"
+Disk Date = 3431426160
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0029]
+Path = "/c/Program Files (x86)/SLM Controller UvA/UCP/General_DLL.h"
+File Type = "Include"
+Disk Date = 3472558838
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0030]
+Path = "/c/Program Files (x86)/SLM Controller UvA/libmat/libmat/mat.h"
+File Type = "Include"
+Disk Date = 0
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0031]
+Path = "/c/Program Files (x86)/SLM Controller UvA/libmat/matrix.h"
+File Type = "Include"
+Disk Date = 3409938004
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0032]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Internal.h"
+File Type = "Include"
+Disk Date = 3437981100
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0033]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel.h"
+File Type = "Include"
+Disk Date = 3473837678
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0034]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM.h"
+File Type = "Include"
+Disk Date = 3458152980
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0035]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_internal.h"
+File Type = "Include"
+Disk Date = 3458628780
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0036]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_Zernike.h"
+File Type = "Include"
+Disk Date = 3437981100
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0037]
+Path = "/c/Program Files (x86)/SLM Controller UvA/FFTW/fftw3.lib"
+File Type = "Library"
+Disk Date = 3472558838
+In Projects = "1,"
+
+[File 0038]
+Path = "/c/Program Files (x86)/SLM Controller UvA/FlyCapture2/FlyCapture2_C.lib"
+File Type = "Library"
+Disk Date = 3479828958
+In Projects = "1,"
+
+[File 0039]
+Path = "/c/Program Files (x86)/SLM Controller UvA/UCP/General_DLL.lib"
+File Type = "Library"
+Disk Date = 3472558838
+In Projects = "1,"
+
+[File 0040]
+Path = "/c/Users/Admini/Desktop/SLM/SLM Controller UvA/libmat/libmat.lib"
+File Type = "Library"
+Disk Date = 3472558838
+In Projects = "1,"
+
+[File 0041]
+Path = "/c/Users/Admini/Desktop/SLM/SLM Controller UvA/libmat/libmx.lib"
+File Type = "Library"
+Disk Date = 3472558838
+In Projects = "1,"
+
+[Default Build Config 0001 Debug]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Debug64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Default Build Config 0001 Release64]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Custom Build Config 0001 gcc]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Batch Build = False
+Profile = "Disabled"
+Debugging Level = "Standard"
+Execution Trace = "Disabled"
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+External Process Path = ""
+
+[Build Dependencies 0001]
+Number of Dependencies = 0
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Profile = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = True
+
+[Execution Target 0001]
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = ""
+
+[Command Line Args 0001]
+Command Line Args = ""
+Working Directory = ""
+Environment Options = ""
+

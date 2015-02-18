@@ -1,0 +1,48 @@
+[HorizTrans_Callback]
+Class="Function"
+Prototype="int HorizTrans_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[VertTrans_Callback]
+Class="Function"
+Prototype="int VertTrans_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Lens_Callback]
+Class="Function"
+Prototype="int Lens_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[LensFocalLength_Callback]
+Class="Function"
+Prototype="int LensFocalLength_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Wavelength_Callback]
+Class="Function"
+Prototype="int Wavelength_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[InputIntensity_Callback]
+Class="Function"
+Prototype="int InputIntensity_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[Bias_Callback]
+Class="Function"
+Prototype="int Bias_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SubSample_Callback]
+Class="Function"
+Prototype="int SubSample_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[InputLoadFromFile]
+Class="Function"
+Prototype="void InputLoadFromFile(char *camfilename);"
+
+[rbInput_Callback]
+Class="Function"
+Prototype="int rbInput_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[InputLoadFromFile_Callback]
+Class="Function"
+Prototype="int InputLoadFromFile_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ClearSLM_Callback]
+Class="Function"
+Prototype="int ClearSLM_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

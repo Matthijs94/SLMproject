@@ -1,0 +1,36 @@
+[SLM_initPhaseErrorCharacterisation]
+Class="Function"
+Prototype="void SLM_initPhaseErrorCharacterisation(int NxPE, int NyPE, int NZP, double NoiseCutoff, int prealloc, int debugpanel, int dbc1, int dbc2, int dbc3, int dbc4, int dbc5, int dbc6);"
+
+[SetValuesInWindow]
+Class="Function"
+Prototype="void SetValuesInWindow(double (*U)[2], int NxU, int NyU, double *amplitude, double *phase, int xoffset, int yoffset, int Wx, int Wy, int ClearComplement, double amplc);"
+
+[GetPhaseFromWindow]
+Class="Function"
+Prototype="void GetPhaseFromWindow(double (*U)[2], int NxU, int NyU, double *phase, int xoffset, int yoffset, int Wx, int Wy);"
+
+[GetAmplitudeFromWindow]
+Class="Function"
+Prototype="void GetAmplitudeFromWindow(double (*U)[2], int NxU, int NyU, double *ampl, int xoffset, int yoffset, int Wx, int Wy);"
+
+[SLM_IFTA_PE]
+Class="Function"
+Prototype="double *SLM_IFTA_PE(double *cj0, int N, int UseSoftOp, int NPmax, int prjinterval, double beta, double *RefAmpMatch, int debugpanel, int dbc1, int dbc2, int dbc3, int dbc4, int dbc5, int dbc6, int debuggraph, int debuggraph2, int debuggraph3);"
+
+[AitkenTransform]
+Class="Function"
+Prototype="double *AitkenTransform(double *seq, int N);"
+
+[SLM_evaluateAberrationCorrection]
+Class="Function"
+Prototype="void SLM_evaluateAberrationCorrection(int SLMPixelsPanel, int SLMPixelsCanvas, int SimPanel, int SimCanvas, double *ZernikeCoeffs, int NZ, double **correlation, double **sharpness);"
+
+[SLM_getCharacterisationBasePhase]
+Class="Function"
+Prototype="double *SLM_getCharacterisationBasePhase();"
+
+[SLM_getCharacterisationReferenceAmplitude]
+Class="Function"
+Prototype="void SLM_getCharacterisationReferenceAmplitude(double **refampl, int *wx, int *wy, int *wxpos, int *wypos);"
+

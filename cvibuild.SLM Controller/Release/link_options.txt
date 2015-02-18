@@ -1,0 +1,62 @@
+-nologo
+-out:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Controller.exe
+-arch:x86
+-timestamp
+-res:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\resources.res
+-entry:_CVIWinMainStartupCode@0
+-base:0x400000
+-linked:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\linkersummary.txt
+-dlldeps:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\dlldependencies.txt
+-licensing:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\linkerlicensing.txt
+-browsedeps:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\moduledependencies.txt
+-stackreserve:1048576
+-stackcommit:4096
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Camera Panel Calibration.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Camera Panel Feedback.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Camera Panel general.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Camera Panel Measurement.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Control Panel Beam Shaping.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Control Panel Client Mode.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Control Panel Feedback.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Control Panel General.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Control Panel Load Save.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Control Panel Phase Error.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Control Panel SH.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Control Panel Spot Array.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Control Panel.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Pixel Panel.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM Simulation Panel.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM_aberrations.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM_characterisation.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM_general.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM_genetic.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM_patterns.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM_simulation.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM_support.obj
+-in:c:\Program Files (x86)\SLM Controller UvA\cvibuild.SLM Controller\Release\SLM_Zernike.obj
+-more:c:\program files (x86)\national instruments\cvi2013\bin\msvc\cvistart.lib
+-more:c:\program files (x86)\national instruments\cvi2013\bin\msvc\cvi.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\advapi32.lib
+-more:c:\ProgramData\National Instruments\CVI2013\bin\msvc\analysis.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cviauto.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cviddc.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvidotnet.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvinetstreams.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvinetv.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvintwrk.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\cvitdms.lib
+-more:c:\Program Files (x86)\SLM Controller UvA\FFTW\fftw3.lib
+-more:c:\Program Files (x86)\SLM Controller UvA\FlyCapture2\FlyCapture2_C.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\gdi32.lib
+-more:c:\Program Files (x86)\SLM Controller UvA\UCP\General_DLL.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\gpib.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\kernel32.lib
+-more:c:\Users\Admini\Desktop\SLM\SLM Controller UvA\libmat\libmat.lib
+-more:c:\Users\Admini\Desktop\SLM\SLM Controller UvA\libmat\libmx.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\nivxi.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\bin\msvc\omp.lib
+-more:c:\Program Files (x86)\National Instruments\CVI2013\toolslib\toolbox\msvc\toolbox.obj
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\user32.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\uuid.lib
+-more:c:\Program Files (x86)\National Instruments\Shared\CVI\Bin\msvc\visa.lib
+-more:c:\program files (x86)\national instruments\cvi2013\sdk\lib\msvc\winmm.lib

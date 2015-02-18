@@ -1,0 +1,120 @@
+[InitCamera]
+Class="Function"
+Prototype="void InitCamera(int panel, int canvas, int histoxgraph, int histoygraph, int timer);"
+
+[QuitCamera]
+Class="Function"
+Prototype="void QuitCamera();"
+
+[grabCameraFrame]
+Class="Function"
+Prototype="void grabCameraFrame();"
+
+[performCameraAveraging]
+Class="Function"
+Prototype="void performCameraAveraging();"
+
+[CameraTimer_Callback]
+Class="Function"
+Prototype="int CameraTimer_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CameraCanvas_Callback]
+Class="Function"
+Prototype="int CameraCanvas_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CameraZoom_Callback]
+Class="Function"
+Prototype="int CameraZoom_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CameraPanel_Callback]
+Class="Function"
+Prototype="int CameraPanel_Callback(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CameraGrid_Callback]
+Class="Function"
+Prototype="int CameraGrid_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CameraGridSpacing_Callback]
+Class="Function"
+Prototype="int CameraGridSpacing_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[TransformCamCanvasToBitmapX]
+Class="Function"
+Prototype="int TransformCamCanvasToBitmapX(int cx);"
+
+[TransformCamCanvasToBitmapY]
+Class="Function"
+Prototype="int TransformCamCanvasToBitmapY(int cy);"
+
+[TransformBitmapToCamCanvasX]
+Class="Function"
+Prototype="int TransformBitmapToCamCanvasX(int bx);"
+
+[TransformBitmapToCamCanvasY]
+Class="Function"
+Prototype="int TransformBitmapToCamCanvasY(int by);"
+
+[TransformBitmapDoubleToCamCanvasX]
+Class="Function"
+Prototype="int TransformBitmapDoubleToCamCanvasX(double bx);"
+
+[TransformBitmapDoubleToCamCanvasY]
+Class="Function"
+Prototype="int TransformBitmapDoubleToCamCanvasY(double by);"
+
+[TransformCamCanvasDoubleToBitmapXDouble]
+Class="Function"
+Prototype="double TransformCamCanvasDoubleToBitmapXDouble(double cx);"
+
+[TransformCamCanvasDoubleToBitmapYDouble]
+Class="Function"
+Prototype="double TransformCamCanvasDoubleToBitmapYDouble(double cy);"
+
+[stopCamera]
+Class="Function"
+Prototype="void stopCamera();"
+
+[CameraStartStop_Callback]
+Class="Function"
+Prototype="int CameraStartStop_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CameraNumFrames_Callback]
+Class="Function"
+Prototype="int CameraNumFrames_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ScreenshotButton_Callback]
+Class="Function"
+Prototype="int ScreenshotButton_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ShowCrosshairs_Callback]
+Class="Function"
+Prototype="int ShowCrosshairs_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[getCurrentFrameNumber]
+Class="Function"
+Prototype="int getCurrentFrameNumber();"
+
+[getCurrentFrame]
+Class="Function"
+Prototype="unsigned char *getCurrentFrame();"
+
+[CameraLoadMatFile]
+Class="Function"
+Prototype="void CameraLoadMatFile(char *camfilename);"
+
+[CameraShutter_Callback]
+Class="Function"
+Prototype="int CameraShutter_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CameraGain_Callback]
+Class="Function"
+Prototype="int CameraGain_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[getCameraNumAveragingFrames]
+Class="Function"
+Prototype="int getCameraNumAveragingFrames();"
+
+[getCameraFrameRate]
+Class="Function"
+Prototype="double getCameraFrameRate();"
+

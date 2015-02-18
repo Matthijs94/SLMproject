@@ -1,0 +1,16 @@
+[SaveSLMPattern_Callback]
+Class="Function"
+Prototype="int SaveSLMPattern_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[LoadSLMPattern_Callback]
+Class="Function"
+Prototype="int LoadSLMPattern_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[LoadSLMSettings]
+Class="Function"
+Prototype="void LoadSLMSettings(char *slmfilename);"
+
+[WritePatternSettings]
+Class="Function"
+Prototype="void WritePatternSettings(struct MatFile_tag *pmat);"
+

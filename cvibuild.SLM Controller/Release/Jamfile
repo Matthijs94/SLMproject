@@ -1,0 +1,155 @@
+HDRS = 	"c:\\program files (x86)\\national instruments\\cvi2013\\include"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\include"
+	"C:\\ProgramData\\National Instruments\\CVI2013\\include"
+	"C:\\ProgramData\\National Instruments\\CVI\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\include\\ansi"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\include\\clang\\2.9"
+	"C:\\Program Files (x86)\\IVI Foundation\\IVI\\Include"
+	"C:\\Program Files (x86)\\IVI Foundation\\VISA\\winnt\\include"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\sdk\\include"
+	"c:\\Program Files (x86)\\SLM Controller UvA"
+	"c:\\Program Files (x86)\\SLM Controller UvA\\libmat"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\activex\\word"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\activex\\excel"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\custctrl"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\custctrl\\custsupp"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\cvirtsup"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\datasock"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\daqUtil"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\printing"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\toolbox"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\reportgen"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\toolslib\\localui"
+	"c:\\program files (x86)\\national instruments\\cvi2013\\instr"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\toolslib\\custctrl\\custsupp"
+	"C:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\instr"
+	"C:\\ProgramData\\National Instruments\\CVI2013\\instr"
+	"c:\\Program Files (x86)\\National Instruments\\CVI2013\\bin"
+	"c:\\ProgramData\\National Instruments\\CVI2013\\bin"
+	"c:\\Program Files (x86)\\National Instruments\\Shared\\CVI\\Bin"
+	"c:\\Program Files (x86)\\SLM Controller UvA\\FlyCapture2"
+	"c:\\Program Files (x86)\\SLM Controller UvA\\UCP"
+	"c:\\Program Files (x86)\\SLM Controller UvA\\libmat\\libmat"
+	;
+include Jamfile_instr ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Calibration.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Camera Panel Calibration.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Calibration.obj" = 1 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Calibration.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Calibration.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Calibration.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Calibration.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Calibration.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Feedback.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Camera Panel Feedback.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Feedback.obj" = 2 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Feedback.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Feedback.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Feedback.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Feedback.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Feedback.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel general.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Camera Panel general.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel general.obj" = 3 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel general.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel general.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel general.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel general.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel general.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Measurement.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Camera Panel Measurement.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Measurement.obj" = 4 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Measurement.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Measurement.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Measurement.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Measurement.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Camera Panel Measurement.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Beam Shaping.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Control Panel Beam Shaping.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Beam Shaping.obj" = 5 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Beam Shaping.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Beam Shaping.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Beam Shaping.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Beam Shaping.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Beam Shaping.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Client Mode.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Control Panel Client Mode.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Client Mode.obj" = 6 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Client Mode.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Client Mode.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Client Mode.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Client Mode.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Client Mode.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Feedback.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Control Panel Feedback.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Feedback.obj" = 7 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Feedback.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Feedback.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Feedback.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Feedback.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Feedback.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel General.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Control Panel General.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel General.obj" = 8 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel General.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel General.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel General.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel General.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel General.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Load Save.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Control Panel Load Save.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Load Save.obj" = 9 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Load Save.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Load Save.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Load Save.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Load Save.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Load Save.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Phase Error.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Control Panel Phase Error.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Phase Error.obj" = 10 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Phase Error.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Phase Error.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Phase Error.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Phase Error.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Phase Error.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel SH.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Control Panel SH.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel SH.obj" = 11 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel SH.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel SH.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel SH.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel SH.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel SH.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Spot Array.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Control Panel Spot Array.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Spot Array.obj" = 12 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Spot Array.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Spot Array.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Spot Array.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Spot Array.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel Spot Array.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Control Panel.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel.obj" = 13 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Control Panel.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Pixel Panel.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Pixel Panel.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Pixel Panel.obj" = 14 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Pixel Panel.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Pixel Panel.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Pixel Panel.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Pixel Panel.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Pixel Panel.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Simulation Panel.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM Simulation Panel.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Simulation Panel.obj" = 15 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Simulation Panel.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Simulation Panel.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Simulation Panel.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Simulation Panel.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Simulation Panel.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_aberrations.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM_aberrations.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_aberrations.obj" = 16 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_aberrations.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_aberrations.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_aberrations.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_aberrations.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_aberrations.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_characterisation.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM_characterisation.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_characterisation.obj" = 17 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_characterisation.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_characterisation.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_characterisation.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_characterisation.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_characterisation.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_general.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM_general.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_general.obj" = 18 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_general.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_general.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_general.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_general.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_general.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_genetic.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM_genetic.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_genetic.obj" = 19 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_genetic.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_genetic.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_genetic.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_genetic.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_genetic.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_patterns.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM_patterns.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_patterns.obj" = 20 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_patterns.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_patterns.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_patterns.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_patterns.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_patterns.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_simulation.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM_simulation.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_simulation.obj" = 21 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_simulation.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_simulation.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_simulation.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_simulation.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_simulation.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_support.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM_support.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_support.obj" = 22 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_support.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_support.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_support.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_support.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_support.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_Zernike.obj" : "c:\\Program Files (x86)\\SLM Controller UvA\\SLM_Zernike.c" ;
+FILENUM on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_Zernike.obj" = 23 ;
+DEFPROTS on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_Zernike.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_Zernike.obj.cvidefprots" ;
+OUTFILE on "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_Zernike.obj" = "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_Zernike.obj.out" ;
+PrjObjects += "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM_Zernike.obj" ;
+Object "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\resources.res" : "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\resources.in.rc" ;
+MainFromObjects "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Controller.exe" : $(PrjObjects) $(InstrObjects) ;
+Depends "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Controller.exe" : "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\link_options.txt" ;
+Depends "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Controller.exe" : "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\resources.res" ;
+Depends all : "c:\\Program Files (x86)\\SLM Controller UvA\\cvibuild.SLM Controller\\Release\\SLM Controller.exe" ;
