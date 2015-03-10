@@ -1,0 +1,60 @@
+[SLM_initialiseSimulation]
+Class="Function"
+Prototype="void SLM_initialiseSimulation(int Xsize, int Ysize);"
+
+[calcHelmholtzPropagationPhase]
+Class="Function"
+Prototype="void calcHelmholtzPropagationPhase(double *HelmholtzPhase, double z, double Lx, double Ly, int NxSLM, int NySLM);"
+
+[calcHelmholtzLensPhase]
+Class="Function"
+Prototype="void calcHelmholtzLensPhase(double *HelmholtzLensPhase, double f, double Lx, double Ly, int Nx, int Ny);"
+
+[multiplyByPhase]
+Class="Function"
+Prototype="void multiplyByPhase(double (*amp)[2], double *phase, int Nx, int Ny);"
+
+[fftshift]
+Class="Function"
+Prototype="void fftshift(double (*f)[2], int Nx, int Ny);"
+
+[SLM_calculateIntensity]
+Class="Function"
+Prototype="void SLM_calculateIntensity(double (*FFT_focal)[2], double (*FFT_SLM)[2], struct fftw_plan_s **FFT_plan, struct fftw_plan_s **FFT_plan_inverse, double x0, double y0, double Sx, double Sy, int Nx, int Ny);"
+
+[SLM_simulateIntensity]
+Class="Function"
+Prototype="void SLM_simulateIntensity(int Panel, int Canvas);"
+
+[SLM_setSimZPos]
+Class="Function"
+Prototype="void SLM_setSimZPos(double zpos);"
+
+[SLM_toggleSim]
+Class="Function"
+Prototype="void SLM_toggleSim(unsigned int sim, unsigned int simphase);"
+
+[SLM_setSimSaturation]
+Class="Function"
+Prototype="void SLM_setSimSaturation(double simsat);"
+
+[SLM_setSimZoom]
+Class="Function"
+Prototype="void SLM_setSimZoom(double simzoom);"
+
+[SLM_setSimGridSpacing]
+Class="Function"
+Prototype="void SLM_setSimGridSpacing(double simgridspacing);"
+
+[SLM_setSimShowGrid]
+Class="Function"
+Prototype="void SLM_setSimShowGrid(int simshowgrid);"
+
+[SLM_setSimSuperSampling]
+Class="Function"
+Prototype="void SLM_setSimSuperSampling(int ssample);"
+
+[SLM_setSimHelmholtz]
+Class="Function"
+Prototype="void SLM_setSimHelmholtz(int helmholtz);"
+

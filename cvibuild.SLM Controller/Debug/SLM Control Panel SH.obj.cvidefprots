@@ -1,0 +1,8 @@
+[ShackHartmann_Callback]
+Class="Function"
+Prototype="int ShackHartmann_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CalibratePhaseAberr_Callback]
+Class="Function"
+Prototype="int CalibratePhaseAberr_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

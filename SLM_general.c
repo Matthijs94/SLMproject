@@ -12,6 +12,10 @@
 
 #include "SLM_internal.h"
 #include "SLM_Zernike.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+
 
 // Number of pixels in each dimension on the SLM pixel canvas
 int gXsize;
@@ -28,6 +32,9 @@ double gSimSaturation;
 
 // the simulation lens focal length (in m)
 double gFocalLength;
+
+// the magnification of focal length
+double gMagnification;
 
 // the simulation wavelength (in m)
 double gWavelength;
@@ -68,8 +75,12 @@ double* gSLMtotal;
 double* gSLMFPtotal;
 
 // the SLM horizontal and vertical translation phase patterns
-unsigned char* gSLMhtrans;
-unsigned char* gSLMvtrans;
+double* gSLMhtrans;
+double* gSLMvtrans;
+
+// the factory correction and the SH correction to the SLM phase pattern
+double* gSLMFactoryCorrection;
+double* gSLMSHcorrection;
 
 // the SLM lens correction phase pattern
 unsigned char* gSLMLensX;
@@ -90,7 +101,7 @@ int gNumZernikeCoefficients;
 double gLensXphase = 0.0, gLensYphase = 0.0, gHorizTrans = 0.0, gVertTrans = 0.0, gAberration = 0.0, gLensX = 0.0, gLensY = 0.0;
 
 // SLM pixel data in which we can directly write
-unsigned char* gSLMPatternPixels;
+double* gSLMPatternPixels;
 
 // SLM pixel data to which we have added the translation phases, lens phases, etc.
 unsigned char* gSLMPixels;
@@ -183,19 +194,21 @@ void SLM_initialise(int Xsize, int Ysize, int SimXsize, int SimYsize, int SubSam
 	// initialize the SLM phase pattern and the corrections (translations and lens phases)
 	gSLMphase      = (double *) realloc(gSLMphase,      gXsize * gYsize * sizeof(double));
 	gSLMtotal      = (double *) realloc(gSLMtotal,      gXsize * gYsize * sizeof(double));
-	gSLMhtrans     = (unsigned char *) realloc(gSLMhtrans,             gCanvasXsize * sizeof(unsigned char));
-	gSLMvtrans     = (unsigned char *) realloc(gSLMvtrans,             gCanvasYsize * sizeof(unsigned char));
+	gSLMhtrans     = (unsigned char *) realloc(gSLMhtrans,             gCanvasXsize * sizeof(double));
+	gSLMvtrans     = (unsigned char *) realloc(gSLMvtrans,             gCanvasYsize * sizeof(double));
 	gSLMLensX       = (unsigned char *) realloc(gSLMLensX, gCanvasXsize * sizeof(unsigned char));
 	gSLMLensY       = (unsigned char *) realloc(gSLMLensY, gCanvasYsize * sizeof(unsigned char));
 	gSLMXsquared    = (double *) realloc(gSLMXsquared,  gCanvasXsize * sizeof(double));
 	gSLMYsquared    = (double *) realloc(gSLMYsquared,  gCanvasYsize * sizeof(double));
 	gSLMaberration = (double *) realloc(gSLMaberration, gXsize * gYsize * sizeof(double));
 	gSignal        = (double *) realloc(gSignal,        gXsize * gYsize * sizeof(double));
-
+	
 	// (re)allocate memory for the input intensity arrays
 	gInputAmplitude  = (double*) realloc(gInputAmplitude, gXsize * gYsize * sizeof(double));
 	gInputAmplitudeX = (double*) realloc(gInputAmplitudeX, gXsize * sizeof(double));
 	gInputAmplitudeY = (double*) realloc(gInputAmplitudeY, gYsize * sizeof(double));
+	
+
 
 	// recalculate the input intensity
 	switch (gInputIntensityMode)
@@ -217,6 +230,7 @@ void SLM_initialise(int Xsize, int Ysize, int SimXsize, int SimYsize, int SubSam
 			break;
 	}
 
+		
 	// compute the x-squared and y-squared arrays for the lens phases
 	double x, y;
 	for (int k = 0; k < gCanvasXsize; k++)
@@ -232,12 +246,12 @@ void SLM_initialise(int Xsize, int Ysize, int SimXsize, int SimYsize, int SubSam
 		gSLMYsquared[l] = y * y;
 	}
 
-	// set the lens phase, aberration correction, and translation patterns
+	// set the lens phase, aberration correction, and translation patterns and the correction
 	SLM_setLensPhase(gLensXphase, gLensYphase);
 	SLM_setAberrationCorrection(NULL, 0, 0, 0);
 	SLM_setHorizTrans(gHorizTrans);
 	SLM_setVertTrans(gVertTrans);
-
+	
 	// fill the colormap, following the pattern AARRGGBB
 	for (int k = 0; k < 256; k++)
 		gSLMColorMap[k] = k * 0x00010101;
@@ -249,10 +263,10 @@ void SLM_initialise(int Xsize, int Ysize, int SimXsize, int SimYsize, int SubSam
 		gSLMFPtotal = (double *) realloc(gSLMFPtotal, gCanvasXsize * gCanvasYsize * sizeof(double));
 
 	// allocate memory for the final SLM pixels
-	gSLMPixels = (unsigned char*) realloc(gSLMPixels, gCanvasXsize * gCanvasYsize * sizeof(unsigned char));
+	gSLMPixels = (double*) realloc(gSLMPixels, gCanvasXsize * gCanvasYsize * sizeof(double));
 
 	// initialize the bitmap with the SLM pattern pixel data
-	gSLMPatternPixels = (unsigned char*) realloc(gSLMPatternPixels, gCanvasXsize * gCanvasYsize * sizeof(unsigned char));
+	gSLMPatternPixels = (double*) realloc(gSLMPatternPixels, gCanvasXsize * gCanvasYsize * sizeof(double));
 	NewBitmap(-1, 8, gCanvasXsize, gCanvasYsize, gSLMColorMap, gSLMPatternPixels, NULL, &gBitmap);
 
 	// check if the FFT variables were already initialised
@@ -305,7 +319,7 @@ void SLM_update(int Panel, int Canvas, int SimPanel, int SimCanvas, int pattern_
 			// set the current pixel, subtracting the aberration correction
 			gSLMtotal [l * gXsize + k] = pixelval - gSLMaberration[l * gXsize + k];
 		}
-
+	
 		// conversion factor from 2 * pi to 256
 		double convf = 256.0 / (2 * PI);
 
@@ -316,22 +330,42 @@ void SLM_update(int Panel, int Canvas, int SimPanel, int SimCanvas, int pattern_
 
 			// convert and copy the resampled phase to the SLM pixels
 			for (int k = 0; k < gCanvasXsize * gCanvasYsize; k++)
-				gSLMPatternPixels[k] = (unsigned char) (convf * gSLMFPtotal [k]);
+				gSLMPatternPixels[k] = (double) (convf * gSLMFPtotal [k]);
 		}
 		else
 		{
-			// convert the floating point phase to unsigned char
+			// convert the floating point phase to unsigned char got rid of the convf
 			for (int k = 0; k < gCanvasXsize * gCanvasYsize; k++)
-				gSLMPatternPixels[k] = (unsigned char) (convf * gSLMtotal [k]);
+				gSLMPatternPixels[k] = (double) (convf * gSLMtotal [k]);
 		}
+		
 	}
 
-	// add translation phases and lens correction to the SLM pixels
+	// add translation phases and lens correction to the SLM pixels, ugly solution b/c General protection fault without source line info.  
 	for (int k = 0; k < gCanvasXsize; k++)
 	for (int l = 0; l < gCanvasYsize; l++)
 	{
-		gSLMPixels[k + l * gCanvasXsize] = gSLMPatternPixels[k + l * gCanvasXsize] + gSLMhtrans[k]
-										 + gSLMvtrans[l] + gSLMLensX[k] + gSLMLensY[l] + gBias;//(k > gCanvasXsize / 2 ? gBias : 0);
+		
+		if (gSLMFactoryCorrection == NULL && gSLMSHcorrection == NULL)
+		{
+			gSLMPixels[k + l * gCanvasXsize] = (gSLMPatternPixels[k + l * gCanvasXsize] + gSLMhtrans[k]
+										 + gSLMvtrans[l] + gSLMLensX[k] + gSLMLensY[l] + gBias);
+		}
+		else if (gSLMFactoryCorrection != NULL && gSLMSHcorrection != NULL)
+		{
+			gSLMPixels[k + l * gCanvasXsize] = (gSLMPatternPixels[k + l * gCanvasXsize] + gSLMhtrans[k]
+										 + gSLMvtrans[l] + gSLMLensX[k] + gSLMLensY[l] + gBias + gSLMFactoryCorrection[k + l * gCanvasXsize] + gSLMSHcorrection[k + l * gCanvasXsize]); //(k > gCanvasXsize / 2 ? gBias : 0);
+		}
+		else if (gSLMFactoryCorrection != NULL && gSLMSHcorrection == NULL)
+		{
+			gSLMPixels[k + l * gCanvasXsize] = (gSLMPatternPixels[k + l * gCanvasXsize] + gSLMhtrans[k]
+										 + gSLMvtrans[l] + gSLMLensX[k] + gSLMLensY[l] + gBias + gSLMFactoryCorrection[k + l * gCanvasXsize]);
+		}
+		else if (gSLMFactoryCorrection == NULL && gSLMSHcorrection != NULL)
+		{
+			gSLMPixels[k + l * gCanvasXsize] = (gSLMPatternPixels[k + l * gCanvasXsize] + gSLMhtrans[k]
+										 + gSLMvtrans[l] + gSLMLensX[k] + gSLMLensY[l] + gBias + gSLMSHcorrection[k + l * gCanvasXsize]);
+		}
 	}
 
 	// update the bitmap
@@ -463,11 +497,17 @@ void SLM_setHorizTrans(double htrans)
 
 	// update the horizontal translation pattern
 	for (int k = 0; k < gCanvasXsize; k++)
-		gSLMhtrans[k] = (unsigned char) (256.0 * (((double) k) / ((double) gCanvasXsize)) * (htrans / gFocalUnitX));
+	{
+		gSLMhtrans[k] = (double) (256 * (((double) k) / ((double) gCanvasXsize)) * (htrans / gFocalUnitX));
+		int a = gSLMhtrans[k];
+		a = a%256;
+		gSLMhtrans[k] = a;
+	}
+					
 }
 
 
-/// HIFN adjusts the horizontal translation of the intensity pattern, the translation is specified in meters
+/// HIFN adjusts the vertical translation of the intensity pattern, the translation is specified in meters
 void SLM_setVertTrans(double vtrans)
 {
 	// store the new value
@@ -501,8 +541,6 @@ void SLM_updateLensPattern()
 	double qamplx = PI / (gWavelength * (gLensXphase + gFocalLength)) - PI / (gWavelength * (gFocalLength));
 	double qamply = PI / (gWavelength * (gLensYphase + gFocalLength)) - PI / (gWavelength * (gFocalLength));
 
-	// x and y coordinates
-	double x, y;
 
 	// conversion factor from 2 * pi to 256
 	double convf = 256.0 / (2 * PI);
@@ -514,16 +552,87 @@ void SLM_updateLensPattern()
 		gSLMLensY[l] = (unsigned char) (convf * qamply * gSLMYsquared[l]);
 }
 
+// HIFN loads a factory correction to the SLM pattern
+void LoadFactoryCorrection(char filename[], int Check)
+{
+	if (filename == 0 || Check == 0)
+	{
+		gSLMFactoryCorrection = NULL;
+	}
+	else
+	{
+							
+		int FactoryCorrectionBitmap = -1;
+		GetBitmapFromFile(filename, &FactoryCorrectionBitmap);
+	
+		// allocate variables to hold the bitmap data
+		int BytesPerRow, PixelDepth, Width, Height;
+		unsigned char* Correction;
+		AllocBitmapData (FactoryCorrectionBitmap, NULL, &Correction, NULL);
+		// get bitmap pixel data
+		GetBitmapData (FactoryCorrectionBitmap, &BytesPerRow, &PixelDepth, &Width, &Height, NULL, Correction, NULL);
+	
+		// allocate array to hold the signal intensity
+		double* FactoryCorrection = (double*) malloc(Width * Height * sizeof(double));
+		
+		// extract the GREEN channel pixel data
+		for (int k = 0; k < Width * Height; k++)
+			FactoryCorrection[k] = ((double) Correction[k * (PixelDepth >> 3)+1]);
+	
+		// Resample to the SLM size
+		gSLMFactoryCorrection = FactoryCorrection; //SLM_resamplePhase(FactoryCorrection, Width, Height, gCanvasXsize, gCanvasYsize);
+	}
+	
+}
+
+
+// HIFN loads a SH surface correction to the SLM pattern
+void LoadSHcorrection(char filename[], int check)
+{
+	if (filename == 0 || check == 0)
+	{
+		gSLMSHcorrection = NULL;
+	}
+	else
+	{
+		int SHcorrectionBitmap = -1;
+		GetBitmapFromFile(filename, &SHcorrectionBitmap);
+		
+		//allocate variable to hold the bitmap data
+		int BytesPerRow, PixelDepth, Width, Height;
+		unsigned char* Correction;
+		AllocBitmapData(SHcorrectionBitmap, NULL, &Correction, NULL);
+		//get bitmap pixel data
+		GetBitmapData (SHcorrectionBitmap, &BytesPerRow, &PixelDepth, &Width, &Height, NULL, Correction, NULL);
+		
+		// allocate array to hold the signal intensity
+		double* SHcorrection = (double*) malloc(Width * Height * sizeof(double));
+		
+		//fill gSLMSHcorrection
+		for (int k = 0; k < Width * Height; k++)
+			SHcorrection[k] = ((double) Correction[k * (PixelDepth >> 3)+1]);
+		gSLMSHcorrection = SHcorrection;
+	}
+}
+
 
 /// HIFN set the simulation lens focal length (in mm)
 void SLM_setLensFocalLength(double f)
 {
-	gFocalLength = f;
+	gFocalLength = f/gMagnification;
 
 	// compute the new focal units
 	SLM_updateFocalUnit();
 }
 
+/// HIFN set the telescope correction
+void SLM_setMagnification(double h)
+{
+	gMagnification = h;
+	
+	// compute the new focal length
+	SLM_setLensFocalLength(gFocalLength);
+}
 
 /// HIFN computes the focal unit, and updates gFocalUnitX and gFocalUnitY
 void SLM_updateFocalUnit(void)
@@ -532,7 +641,6 @@ void SLM_updateFocalUnit(void)
 	gFocalUnitX = gFocalLength * gWavelength / LxSLM;
 	gFocalUnitY = gFocalLength * gWavelength / LySLM;
 }
-
 
 
 /// HIFN set the simulation wavelength (in nm)

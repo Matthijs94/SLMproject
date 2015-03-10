@@ -152,7 +152,7 @@ int CVICALLBACK LensFocalLength_Callback (int panel, int control, int event,
 			
 			// update the displayed information about the SLM 
 			UpdateSLMinfo();
-			
+			/*
 			// check if we need to update
 			if (eventData1 != SLM_NO_UPDATE)
 			{
@@ -163,12 +163,48 @@ int CVICALLBACK LensFocalLength_Callback (int panel, int control, int event,
 				// update the SLM panel and the simulation Panel (if toggled)
 				SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 1);
 			}
-			
+			*/
 			break;
 		}
 	}
 	return 0;
 }
+
+/// HIFN Callback function for changing the telescope correction
+int CVICALLBACK Magnification_Callback(int panel, int control, int event, 
+		void *callbackData, int eventData1, int eventData2)
+{
+	switch(event)
+	{
+		case EVENT_COMMIT:
+		{
+			double val;
+			GetCtrlVal(panel, control, &val);
+			
+			// set the correction, update the focal units
+			SLM_setMagnification(val);
+			
+			// update the displayed information about the SLM
+			UpdateSLMinfo();
+			
+			/*
+			//check if we need to update
+			if (eventData1 != SLM_NO_UPDATE)
+			{
+				//do we need to recalculate the pattern?
+				if (gCurrentPattern == SLM_BEAMSHAPE_STD)
+					BeamShape_Callback (TabPage_2_0, TABPANEL_7_BeamShapeOK, EVENT_COMMIT, NULL, 0, 0);
+				
+				// update the SLM panel and the simulation Panel (if toggled)
+				SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 1);
+			}  */
+			break;
+		}
+	}
+	return 0;
+}
+	
+
 
 
 /// HIFN Callback function for changing the wavelength of the simulation

@@ -1,0 +1,264 @@
+[PreCalculateZernikePolynomials]
+Class="Function"
+Prototype="void PreCalculateZernikePolynomials(int Nx, int Ny, int NZP);"
+
+[SampleZernikeJ]
+Class="Function"
+Prototype="double *SampleZernikeJ(int j, int Nx, int Ny);"
+
+[FillArrayZernikeJ]
+Class="Function"
+Prototype="void FillArrayZernikeJ(double *ZJ, int j, int Nx, int Ny);"
+
+[CalculateZernikeJ]
+Class="Function"
+Prototype="void CalculateZernikeJ(double *ZJ, int j, int Nx, int Ny);"
+
+[ProjectPhaseOntoZernikeSpace]
+Class="Function"
+Prototype="void ProjectPhaseOntoZernikeSpace(double *phase, double *cj, int Nx, int Ny, int NZP);"
+
+[ZernikeRectangleIntegral]
+Class="Function"
+Prototype="double ZernikeRectangleIntegral(double *f, int Nx, int Ny);"
+
+[ZernikeJ]
+Class="Function"
+Prototype="double ZernikeJ(int j, double x, double y);"
+
+[RectZernike1]
+Class="Function"
+Prototype="double RectZernike1(double x, double y);"
+
+[RectZernike2]
+Class="Function"
+Prototype="double RectZernike2(double x, double y);"
+
+[RectZernike3]
+Class="Function"
+Prototype="double RectZernike3(double x, double y);"
+
+[RectZernike4]
+Class="Function"
+Prototype="double RectZernike4(double x, double y);"
+
+[RectZernike5]
+Class="Function"
+Prototype="double RectZernike5(double x, double y);"
+
+[RectZernike6]
+Class="Function"
+Prototype="double RectZernike6(double x, double y);"
+
+[RectZernike7]
+Class="Function"
+Prototype="double RectZernike7(double x, double y);"
+
+[RectZernike8]
+Class="Function"
+Prototype="double RectZernike8(double x, double y);"
+
+[RectZernike9]
+Class="Function"
+Prototype="double RectZernike9(double x, double y);"
+
+[RectZernike10]
+Class="Function"
+Prototype="double RectZernike10(double x, double y);"
+
+[RectZernike11]
+Class="Function"
+Prototype="double RectZernike11(double x, double y);"
+
+[RectZernike12]
+Class="Function"
+Prototype="double RectZernike12(double x, double y);"
+
+[RectZernike13]
+Class="Function"
+Prototype="double RectZernike13(double x, double y);"
+
+[RectZernike14]
+Class="Function"
+Prototype="double RectZernike14(double x, double y);"
+
+[RectZernike15]
+Class="Function"
+Prototype="double RectZernike15(double x, double y);"
+
+[RectZernike16]
+Class="Function"
+Prototype="double RectZernike16(double x, double y);"
+
+[RectZernike17]
+Class="Function"
+Prototype="double RectZernike17(double x, double y);"
+
+[RectZernike18]
+Class="Function"
+Prototype="double RectZernike18(double x, double y);"
+
+[RectZernike19]
+Class="Function"
+Prototype="double RectZernike19(double x, double y);"
+
+[RectZernike20]
+Class="Function"
+Prototype="double RectZernike20(double x, double y);"
+
+[RectZernike21]
+Class="Function"
+Prototype="double RectZernike21(double x, double y);"
+
+[RectZernike22]
+Class="Function"
+Prototype="double RectZernike22(double x, double y);"
+
+[RectZernike23]
+Class="Function"
+Prototype="double RectZernike23(double x, double y);"
+
+[RectZernike24]
+Class="Function"
+Prototype="double RectZernike24(double x, double y);"
+
+[RectZernike25]
+Class="Function"
+Prototype="double RectZernike25(double x, double y);"
+
+[RectZernike26]
+Class="Function"
+Prototype="double RectZernike26(double x, double y);"
+
+[RectZernike27]
+Class="Function"
+Prototype="double RectZernike27(double x, double y);"
+
+[RectZernike28]
+Class="Function"
+Prototype="double RectZernike28(double x, double y);"
+
+[RectZernikePolynomial]
+Class="Function"
+Prototype="double (*RectZernikePolynomial(int i))(double, double);"
+
+[generateCZZ]
+Class="Function"
+Prototype="double *generateCZZ(double a, double b, int N);"
+
+[GradRectZernike1]
+Class="Function"
+Prototype="void GradRectZernike1(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike2]
+Class="Function"
+Prototype="void GradRectZernike2(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike3]
+Class="Function"
+Prototype="void GradRectZernike3(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike4]
+Class="Function"
+Prototype="void GradRectZernike4(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike5]
+Class="Function"
+Prototype="void GradRectZernike5(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike6]
+Class="Function"
+Prototype="void GradRectZernike6(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike7]
+Class="Function"
+Prototype="void GradRectZernike7(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike8]
+Class="Function"
+Prototype="void GradRectZernike8(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike9]
+Class="Function"
+Prototype="void GradRectZernike9(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike10]
+Class="Function"
+Prototype="void GradRectZernike10(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike11]
+Class="Function"
+Prototype="void GradRectZernike11(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike12]
+Class="Function"
+Prototype="void GradRectZernike12(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike13]
+Class="Function"
+Prototype="void GradRectZernike13(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike14]
+Class="Function"
+Prototype="void GradRectZernike14(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike15]
+Class="Function"
+Prototype="void GradRectZernike15(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike16]
+Class="Function"
+Prototype="void GradRectZernike16(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike17]
+Class="Function"
+Prototype="void GradRectZernike17(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike18]
+Class="Function"
+Prototype="void GradRectZernike18(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike19]
+Class="Function"
+Prototype="void GradRectZernike19(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike20]
+Class="Function"
+Prototype="void GradRectZernike20(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike21]
+Class="Function"
+Prototype="void GradRectZernike21(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike22]
+Class="Function"
+Prototype="void GradRectZernike22(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike23]
+Class="Function"
+Prototype="void GradRectZernike23(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike24]
+Class="Function"
+Prototype="void GradRectZernike24(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike25]
+Class="Function"
+Prototype="void GradRectZernike25(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike26]
+Class="Function"
+Prototype="void GradRectZernike26(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike27]
+Class="Function"
+Prototype="void GradRectZernike27(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernike28]
+Class="Function"
+Prototype="void GradRectZernike28(double x, double y, double *xgrad, double *ygrad);"
+
+[GradRectZernikePolynomial]
+Class="Function"
+Prototype="void (*GradRectZernikePolynomial(int i))(double, double, double *, double *);"
+

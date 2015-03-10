@@ -1,0 +1,164 @@
+[SLM_setG]
+Class="Function"
+Prototype="void SLM_setG(double *ampl, double *phase, int NG);"
+
+[SLM_applyConstraints]
+Class="Function"
+Prototype="void SLM_applyConstraints(double (*G)[2], int NG, double *constraint);"
+
+[IFTA_optimize]
+Class="Function"
+Prototype="void IFTA_optimize(double *f, double *phasef, double (*g)[2], double *constraintG, double (*G)[2], struct fftw_plan_s **FFTplan_Gg, struct fftw_plan_s **FFTplan_gG, int Nf, unsigned char *signalmask, unsigned char *phasemask, int Nit, int UseSoftOp);"
+
+[IFTA_optimize_rms]
+Class="Function"
+Prototype="void IFTA_optimize_rms(double *f, double *phasef, double (*g)[2], double *constraintG, double (*G)[2], struct fftw_plan_s **FFTplan_Gg, struct fftw_plan_s **FFTplan_gG, int Nf, unsigned char *signalmask, unsigned char *phasemask, int Nit, int UseSoftOp, int MRAF, double *rmsvalues, int Nx, int Ny, int sigxmin, int sigxmax, int sigymin, int sigymax);"
+
+[calcEta]
+Class="Function"
+Prototype="double calcEta(double *Ui, double (*Ush)[2], int Nf);"
+
+[SLM_cumulativeTrapz]
+Class="Function"
+Prototype="double *SLM_cumulativeTrapz(double *intensity, double xmin, double xmax, int N);"
+
+[SLM_invertIntensityIntegral]
+Class="Function"
+Prototype="double SLM_invertIntensityIntegral(double *Ix, double I, double xmin, double xmax, int N);"
+
+[SLM_calcCoordinateMapping]
+Class="Function"
+Prototype="double *SLM_calcCoordinateMapping(double *ii, double *is, double ixmin, double ixmax, int Ni, double sxmin, double sxmax, int Ns);"
+
+[SLM_normalise]
+Class="Function"
+Prototype="void SLM_normalise(double *i, int N, double xmin, double xmax);"
+
+[SLM_normalise_sq]
+Class="Function"
+Prototype="void SLM_normalise_sq(double *i, int N, double xmin, double xmax);"
+
+[SLM_integrate_2D]
+Class="Function"
+Prototype="double SLM_integrate_2D(double *i, int Nx, int Ny, double xmin, double xmax, double ymin, double ymax);"
+
+[SLM_normalise_2D]
+Class="Function"
+Prototype="void SLM_normalise_2D(double *i, int Nx, int Ny, double xmin, double xmax, double ymin, double ymax);"
+
+[SLM_normalise_sq_2D]
+Class="Function"
+Prototype="void SLM_normalise_sq_2D(double *i, int Nx, int Ny, double xmin, double xmax, double ymin, double ymax);"
+
+[SLM_normalise_abssq_2D]
+Class="Function"
+Prototype="void SLM_normalise_abssq_2D(double (*f)[2], int Nx, int Ny, double xmin, double xmax, double ymin, double ymax);"
+
+[SLM_SepOp]
+Class="Function"
+Prototype="void SLM_SepOp(double *intensity, int Nx, int Ny, double **ix, double **iy);"
+
+[SLM_resampleBilinear]
+Class="Function"
+Prototype="double *SLM_resampleBilinear(double *input, int Nxi, int Nyi, int Nxo, int Nyo);"
+
+[SLM_resampleBilinearInPlace]
+Class="Function"
+Prototype="void SLM_resampleBilinearInPlace(double *input, double *output, int Nxi, int Nyi, int Nxo, int Nyo);"
+
+[SLM_resamplePhase]
+Class="Function"
+Prototype="double *SLM_resamplePhase(double *input, int Nxi, int Nyi, int Nxo, int Nyo);"
+
+[SLM_resamplePhaseInPlace]
+Class="Function"
+Prototype="void SLM_resamplePhaseInPlace(double *input, double *output, int Nxi, int Nyi, int Nxo, int Nyo);"
+
+[SLM_reduceBitmap]
+Class="Function"
+Prototype="double *SLM_reduceBitmap(double *input, int Nxi, int Nyi, int Nxo, int Nyo);"
+
+[SLM_reduceBitmapInPlace]
+Class="Function"
+Prototype="void SLM_reduceBitmapInPlace(double *input, double *output, int Nxi, int Nyi, int Nxo, int Nyo);"
+
+[SLM_resampleBitmap]
+Class="Function"
+Prototype="double *SLM_resampleBitmap(double *input, int Nxi, int Nyi, int Nxo, int Nyo);"
+
+[SLM_resampleBitmapInPlace]
+Class="Function"
+Prototype="void SLM_resampleBitmapInPlace(double *input, double *output, int Nxi, int Nyi, int Nxo, int Nyo);"
+
+[SLM_findSpotPattern]
+Class="Function"
+Prototype="void SLM_findSpotPattern(double *image, int Nxpixels, int Nypixels, int Nxspots, int Nyspots, double *xpos, double *ypos, double *xspacing, double *yspacing);"
+
+[plotFFTField]
+Class="Function"
+Prototype="void plotFFTField(double (*fftfield)[2], int Nx, int Ny, int Panel, int Canvas);"
+
+[plotFFTFieldPhase]
+Class="Function"
+Prototype="void plotFFTFieldPhase(double (*fftfield)[2], int Nx, int Ny, int Panel, int Canvas);"
+
+[plotField]
+Class="Function"
+Prototype="void plotField(double *f, int Nx, int Ny, int Panel, int Canvas);"
+
+[SLM_CreateColorMap]
+Class="Function"
+Prototype="int *SLM_CreateColorMap(int satmax);"
+
+[writeMatDoubleScalar]
+Class="Function"
+Prototype="void writeMatDoubleScalar(struct MatFile_tag *matfile, char *varname, double varvalue);"
+
+[readMatDoubleScalar]
+Class="Function"
+Prototype="double readMatDoubleScalar(struct MatFile_tag *matfile, char *varname);"
+
+[writeMatDoubleArray]
+Class="Function"
+Prototype="void writeMatDoubleArray(struct MatFile_tag *matfile, const char *varname, double *data, int M, int N);"
+
+[readMatDoubleArray]
+Class="Function"
+Prototype="double *readMatDoubleArray(struct MatFile_tag *matfile, const char *varname, int *M, int *N);"
+
+[writeMatUnsignedCharArray]
+Class="Function"
+Prototype="void writeMatUnsignedCharArray(struct MatFile_tag *matfile, const char *varname, unsigned char *data, int M, int N);"
+
+[logspace]
+Class="Function"
+Prototype="double *logspace(double xmin, double xmax, double Nx);"
+
+[writeMatIntArray]
+Class="Function"
+Prototype="void writeMatIntArray(struct MatFile_tag *matfile, char *varname, int *varvalues, int Nv);"
+
+[SLM_WriteSettingsToFile]
+Class="Function"
+Prototype="void SLM_WriteSettingsToFile(struct MatFile_tag *pmat);"
+
+[SLM_crossCorrelate]
+Class="Function"
+Prototype="void SLM_crossCorrelate(double *im1, double *im2, int Nx, int Ny, int *xpos, int *ypos);"
+
+[SLM_unwrapPhase]
+Class="Function"
+Prototype="void SLM_unwrapPhase(double *phase, int Nx, int Ny);"
+
+[SLM_averagePhase]
+Class="Function"
+Prototype="double SLM_averagePhase(double t1, double t2, double a);"
+
+[calcSquaredDifference]
+Class="Function"
+Prototype="double calcSquaredDifference(double *f1, double *f2, int N);"
+
+[calcRMSdiff]
+Class="Function"
+Prototype="double calcRMSdiff(double (*f)[2], double *v, int Nx, int Ny, int SigXmin, int SigXmax, int SigYmin, int SigYmax);"
+

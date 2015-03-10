@@ -234,6 +234,7 @@ void SLM_generateSpotArray(int Panel, int Canvas, int SimPanel, int SimCanvas, i
 	int sigxend = sigxoffset + 2 * spotxoffset + spotareax;
 	int sigyend = sigyoffset + 2 * spotyoffset + spotareay;
 	
+	
 	// fill the signal amplitude and phase arrays, and the phase mask
 	for (int k = 0; k < numxspots; k++)
 	{
@@ -570,7 +571,7 @@ double* SLM_calcBeamShapingPhase(
 
 /// HIFN calculates the phase required for geometric beam shaping of the intensity 
 ///      incident onto the SLM (gInputAmplitude) to output intensity (is = isx * isy)
-void SLM_generateBeamShape(double* isx, double *isy, int Nxs, int Nys, 
+void SLM_generateBeamShape(double* isx, double* isy, int Nxs, int Nys, 
 	double sxmin, double sxmax, double symin, double symax, int center)
 {
 	// the input area is given by that of the SLM

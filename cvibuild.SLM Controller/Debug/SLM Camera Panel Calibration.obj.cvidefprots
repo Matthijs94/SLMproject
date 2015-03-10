@@ -1,0 +1,60 @@
+[CamCalMarkZeroOrder_Callback]
+Class="Function"
+Prototype="int CamCalMarkZeroOrder_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CamCalibration_Callback]
+Class="Function"
+Prototype="int CamCalibration_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[getCameraWindowOriginPixel]
+Class="Function"
+Prototype="void getCameraWindowOriginPixel(int *x, int *y);"
+
+[getCalibrationPointSLM]
+Class="Function"
+Prototype="void getCalibrationPointSLM(int p, double *x, double *y);"
+
+[drawCameraCalibrationPoints]
+Class="Function"
+Prototype="void drawCameraCalibrationPoints(int panel, int canvas);"
+
+[CamCalToggle_Callback]
+Class="Function"
+Prototype="int CamCalToggle_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[transformCoordinateSLMToCamera]
+Class="Function"
+Prototype="void transformCoordinateSLMToCamera(double xfrom, double yfrom, double *xto, double *yto);"
+
+[transformCoordinateCameraToSLM]
+Class="Function"
+Prototype="void transformCoordinateCameraToSLM(double xfrom, double yfrom, double *xto, double *yto);"
+
+[transformCoordinate]
+Class="Function"
+Prototype="void transformCoordinate(double *MapFromX, double *MapFromY, double *MapToX, double *MapToY, int Nx, int Ny, double xfrom, double yfrom, double *xto, double *yto);"
+
+[CamCalLoad_Callback]
+Class="Function"
+Prototype="int CamCalLoad_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CamCalSave_Callback]
+Class="Function"
+Prototype="int CamCalSave_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CamCalDisplayPoint_Callback]
+Class="Function"
+Prototype="int CamCalDisplayPoint_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CamCalReCal_Callback]
+Class="Function"
+Prototype="int CamCalReCal_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[CamCalReCalClick_Callback]
+Class="Function"
+Prototype="int CamCalReCalClick_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[updateCalibrationPoint]
+Class="Function"
+Prototype="void updateCalibrationPoint(int p, double SLMx, double SLMy, double CamX, double CamY);"
+

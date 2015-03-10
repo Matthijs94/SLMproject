@@ -1,0 +1,76 @@
+[InitPhaseError_Callback]
+Class="Function"
+Prototype="int InitPhaseError_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseErrorGoCallback]
+Class="Function"
+Prototype="int PhaseErrorGoCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SSRUpdate]
+Class="Function"
+Prototype="int SSRUpdate(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[RandomizeCJ_Callback]
+Class="Function"
+Prototype="int RandomizeCJ_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ClearCJ_Callback]
+Class="Function"
+Prototype="int ClearCJ_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseErrorApplyCallback]
+Class="Function"
+Prototype="int PhaseErrorApplyCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseErrorClearCallback]
+Class="Function"
+Prototype="int PhaseErrorClearCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[LoadCJ_Callback]
+Class="Function"
+Prototype="int LoadCJ_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseBatchGoCallback]
+Class="Function"
+Prototype="int PhaseBatchGoCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseErrorBatchTimer_Callback]
+Class="Function"
+Prototype="int PhaseErrorBatchTimer_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseErrorBatchSaveCallback]
+Class="Function"
+Prototype="int PhaseErrorBatchSaveCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SaveBatchToFile]
+Class="Function"
+Prototype="void SaveBatchToFile(char filename[1024]);"
+
+[PhaseErrorBatchLoadCallback]
+Class="Function"
+Prototype="int PhaseErrorBatchLoadCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseErrorBatchEvalCallback]
+Class="Function"
+Prototype="int PhaseErrorBatchEvalCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseErrorBatchSelect_Callback]
+Class="Function"
+Prototype="int PhaseErrorBatchSelect_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseErrorBatchApplyCallback]
+Class="Function"
+Prototype="int PhaseErrorBatchApplyCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseBatchStopCallback]
+Class="Function"
+Prototype="int PhaseBatchStopCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ManualSlide_Callback]
+Class="Function"
+Prototype="int ManualSlide_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[ManualCj_Callback]
+Class="Function"
+Prototype="int ManualCj_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

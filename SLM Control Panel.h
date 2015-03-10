@@ -1,6 +1,6 @@
 /**************************************************************************/
 /* LabWindows/CVI User Interface Resource (UIR) Include File              */
-/* Copyright (c) National Instruments 2014. All Rights Reserved.          */
+/* Copyright (c) National Instruments 2015. All Rights Reserved.          */
 /*                                                                        */
 /* WARNING: Do not add to, delete from, or otherwise modify the contents  */
 /*          of this include file.                                         */
@@ -227,6 +227,9 @@
 #define  TABPANEL_txtInputIntensity       38      /* control type: textMsg, callback function: (none) */
 #define  TABPANEL_DECORATION_3            39      /* control type: deco, callback function: (none) */
 #define  TABPANEL_UNITS_5                 40      /* control type: textMsg, callback function: (none) */
+#define  TABPANEL_Magnification           41      /* control type: numeric, callback function: Magnification_Callback */
+#define  TABPANEL_Focallengthlabel        42      /* control type: textMsg, callback function: (none) */
+#define  TABPANEL_EffectiveFocalLength    43      /* control type: textMsg, callback function: (none) */
 
      /* tab page panel controls */
 #define  TABPANEL_2_TAB                   2       /* control type: tab, callback function: (none) */
@@ -314,6 +317,12 @@
 #define  TABPANEL_9_LoadKeepInpInt        5       /* control type: radioButton, callback function: (none) */
 #define  TABPANEL_9_LoadKeepSettings      6       /* control type: radioButton, callback function: (none) */
 #define  TABPANEL_9_LoadSaveCameraState   7       /* control type: radioButton, callback function: (none) */
+#define  TABPANEL_9_FactoryCorrection     8       /* control type: string, callback function: (none) */
+#define  TABPANEL_9_LoadFactoryCorrection 9       /* control type: command, callback function: LoadFactoryCorrection_Callback */
+#define  TABPANEL_9_FactorySwitch         10      /* control type: radioButton, callback function: FactorySwitch_Callback */
+#define  TABPANEL_9_SHcorrection          11      /* control type: string, callback function: (none) */
+#define  TABPANEL_9__LoadSHcorrection     12      /* control type: command, callback function: LoadSHcorrection_Callback */
+#define  TABPANEL_9_SHswitch              13      /* control type: radioButton, callback function: SHswitch_Callback */
 
 
      /* Control Arrays: */
@@ -359,6 +368,7 @@ int  CVICALLBACK ClearCorr_Callback(int panel, int control, int event, void *cal
 int  CVICALLBACK ClearSLM_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ClientMode_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK Control_Callback(int panel, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK FactorySwitch_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK FixSignal_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK GaussianPeaks_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK HorizTrans_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
@@ -369,8 +379,11 @@ int  CVICALLBACK itcalc(int panel, int control, int event, void *callbackData, i
 int  CVICALLBACK Lens_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LensFocalLength_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LoadCJ_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK LoadFactoryCorrection_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LoadFile_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK LoadSHcorrection_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LoadSLMPattern_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK Magnification_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ManualCj_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ManualSlide_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK PhaseBatchGoCallback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
@@ -400,6 +413,7 @@ int  CVICALLBACK SaveSLMPattern_Callback(int panel, int control, int event, void
 int  CVICALLBACK ScreenshotButton_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ShackHartmann_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK ShowCrosshairs_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK SHswitch_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SimGrid_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SimGridSpacing_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK SimHelmholtz_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);

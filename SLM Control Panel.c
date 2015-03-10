@@ -164,8 +164,10 @@ void setDefaultValuesFromPanel()
 	
 	// the lens and wavelength callbacks need to be executed first, they set the focal unit which is needed
 	// in the calculations of the other controls
+	Magnification_Callback  (TabPage_0, TABPANEL_Magnification,   EVENT_COMMIT,      NULL, SLM_NO_UPDATE, 0);
 	LensFocalLength_Callback(TabPage_0, TABPANEL_LensFocalLength, EVENT_COMMIT, 	 NULL, SLM_NO_UPDATE, 0);
 	Wavelength_Callback		(TabPage_0, TABPANEL_Wavelength, 	  EVENT_COMMIT, 	 NULL, SLM_NO_UPDATE, 0);
+	
 	
 	// now we can continue with the rest of the callbacks
 	InputIntensity_Callback	(TabPage_0, NULL, 					  EVENT_COMMIT, 	 NULL, SLM_NO_UPDATE, 0);
@@ -177,6 +179,8 @@ void setDefaultValuesFromPanel()
 	VertTrans_Callback		(TabPage_0, TABPANEL_VertTrans, 	  EVENT_VAL_CHANGED, NULL, SLM_NO_UPDATE, 0);
 	Bias_Callback			(TabPage_0, TABPANEL_Bias, 			  EVENT_COMMIT,		 NULL, SLM_NO_UPDATE, 0);
 	
+
+	
 	// update the information about the SLM
 	UpdateSLMinfo();
 	
@@ -187,13 +191,18 @@ void setDefaultValuesFromPanel()
 
 void UpdateSLMinfo(void)
 {
+
+	
 	// update the resolution and focal unit text box on the general panel
 	char txtSLMres[1024];
 	char txtFocalUnit[1024];
+	char txtEffectiveFocalLength[1024];
 	sprintf(txtSLMres, "(%i x%i)", SLM_getXres(), SLM_getYres());
 	sprintf(txtFocalUnit, "(%.2f x%.2f)", SLM_getFocalUnitX() / 1e-6, SLM_getFocalUnitY() / 1e-6);
+	sprintf(txtEffectiveFocalLength, "(%.2f mm)", SLM_getLensFocalLength()*1.0e3);
 	SetCtrlVal(TabPage_0, TABPANEL_SLMResolution, txtSLMres);
 	SetCtrlVal(TabPage_0, TABPANEL_FocalUnit, txtFocalUnit);
+	SetCtrlVal(TabPage_0, TABPANEL_EffectiveFocalLength, txtEffectiveFocalLength);
 }
 
 

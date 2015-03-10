@@ -22,6 +22,10 @@
 #include "SLM Camera Panel.h"
 #include "SLM_internal.h"
 
+ 
+// Make the file name for the correction file
+char FactoryCorrectionFilename[1024];
+char SHCorrectionFilename[1024];
 
 
 /// HIFN Callback function for the button for saving the current SLM phase pattern
@@ -214,7 +218,135 @@ void LoadSLMSettings(char slmfilename[])
 	matClose(pmat);	
 }
 
+// Callback for loading a factory phase correction
+int CVICALLBACK LoadFactoryCorrection_Callback(int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+		{  
+			// let the user specify a filename
+		    int SelectionStatus = FileSelectPopup("", "*.png", "*.jpg;*.tif;*.pcx;*.bmp;*.dib;*.rle;*.ico;*.png;*.wfm;*.emf", "Load Factory Correction", 
+									VAL_OK_BUTTON, 0, 0, 1, 1, FactoryCorrectionFilename);
+			
+			// check the check box for loading the correction
+			int FactoryCorrectionCheck;
+			GetCtrlVal(panel, TABPANEL_9_FactorySwitch, &FactoryCorrectionCheck);
+			
+			// check if a file has been succesfully selected
+			if (SelectionStatus > 0)
+			{
+				// load the SLM settings if the factory correction is switched on
+				if (FactoryCorrectionCheck) 
+				LoadFactoryCorrection(FactoryCorrectionFilename, FactoryCorrectionCheck);
+				
+			}
+			// display the file name onto the load panel
+			SetCtrlVal(TabPage_5, TABPANEL_9_FactoryCorrection, FactoryCorrectionFilename);
+			
+			// check if we need to update
+			if (eventData1 != SLM_NO_UPDATE)
+			{
+				// update the SLM panel and the simulation Panel (if toggled)
+				SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 0);
+			}
+			break;
+		}
+	}
+	return 0;
+}
 
+
+int CVICALLBACK FactorySwitch_Callback(int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			{
+				int FactoryCorrectionCheck;
+				GetCtrlVal(panel, TABPANEL_9_FactorySwitch, &FactoryCorrectionCheck);
+				if (FactoryCorrectionCheck == FALSE)
+				{
+					LoadFactoryCorrection(0, 0);
+					SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 0);
+				}
+				if (FactoryCorrectionCheck == TRUE)
+				{
+					LoadFactoryCorrection(FactoryCorrectionFilename, FactoryCorrectionCheck);
+					SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 0);
+				}
+				break;
+			}
+	}
+	return 0;
+}
+
+// Callback for loading a SH lens surface phase correction
+int CVICALLBACK LoadSHcorrection_Callback(int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+		{  
+			// let the user specify a filename
+		    int SelectionStatus = FileSelectPopup("", "*.png", "*.jpg;*.tif;*.pcx;*.bmp;*.dib;*.rle;*.ico;*.png;*.wfm;*.emf", "Load SH Correction", 
+									VAL_OK_BUTTON, 0, 0, 1, 1, SHCorrectionFilename);
+			
+			// check the check box for loading the correction
+			int SHcorrectionCheck;
+			GetCtrlVal(panel, TABPANEL_9_SHswitch, &SHcorrectionCheck);
+			
+			// check if a file has been succesfully selected
+			if (SelectionStatus > 0)
+			{
+				// load the SLM settings if the factory correction is switched on
+				if (SHcorrectionCheck) 
+				LoadSHcorrection(SHCorrectionFilename, SHcorrectionCheck);
+				
+			}
+			// display the file name onto the load panel
+			SetCtrlVal(TabPage_5, TABPANEL_9_SHcorrection, SHCorrectionFilename);
+			
+			// check if we need to update
+			if (eventData1 != SLM_NO_UPDATE)
+			{
+				// update the SLM panel and the simulation Panel (if toggled)
+				SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 0);
+			}
+			break;
+		}
+	}
+	return 0;
+}
+
+int CVICALLBACK SHswitch_Callback(int panel, int control, int event,
+		void *callbackData, int eventData1, int eventData2)
+{
+	switch (event)
+	{
+		case EVENT_COMMIT:
+			{
+				int SHcorrectionCheck;
+				GetCtrlVal(panel, TABPANEL_9_SHswitch, &SHcorrectionCheck);
+				if (SHcorrectionCheck == FALSE)
+				{
+					LoadSHcorrection(0, 0);
+					SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 0);
+				}
+				if (SHcorrectionCheck == TRUE)
+				{
+					LoadSHcorrection(SHCorrectionFilename, SHcorrectionCheck);
+					SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 0);
+				}
+				break;
+			}
+	}
+	return 0;
+}
+	
 /// HIFN writes the control panel pattern settings to file
 void WritePatternSettings(MATFile *pmat)
 {

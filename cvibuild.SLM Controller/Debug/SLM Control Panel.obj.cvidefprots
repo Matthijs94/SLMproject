@@ -1,0 +1,20 @@
+[main]
+Class="Function"
+Prototype="int main(int argc, char **argv);"
+
+[Control_Callback]
+Class="Function"
+Prototype="int Control_Callback(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[setDefaultValuesFromPanel]
+Class="Function"
+Prototype="void setDefaultValuesFromPanel();"
+
+[UpdateSLMinfo]
+Class="Function"
+Prototype="void UpdateSLMinfo();"
+
+[ControlTab_Callback]
+Class="Function"
+Prototype="int ControlTab_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

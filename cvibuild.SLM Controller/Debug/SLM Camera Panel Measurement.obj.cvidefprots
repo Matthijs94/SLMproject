@@ -1,0 +1,16 @@
+[RandomIndices]
+Class="Function"
+Prototype="int *RandomIndices(int N);"
+
+[CameraSaveMatFile]
+Class="Function"
+Prototype="void CameraSaveMatFile(char *matfilename, int saveslmdata);"
+
+[SpotSequence_Callback]
+Class="Function"
+Prototype="int SpotSequence_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SpotSeqTimer_Callback]
+Class="Function"
+Prototype="int SpotSeqTimer_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

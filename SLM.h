@@ -44,6 +44,7 @@ int SLM_getCanvasXres(void);
 int SLM_getCanvasYres(void);
 
 
+
 /// HIFN get the current base phase pattern of the SLM
 double* SLM_getPhase(void);
 
@@ -89,6 +90,15 @@ void SLM_setSimSaturation(double simsat);
 
 /// HIFN set the simulation lens focal length (in m)
 void SLM_setLensFocalLength(double f);
+
+/// HIFN set the magnification of the focal length
+void SLM_setMagnification(double h);
+
+/// HIFN loads a factory correction
+void LoadFactoryCorrection(char FactoryCorrectionfilename[], int FactoryCorrectionCheck);
+
+/// HIFN loads a SH surface correction
+void LoadSHcorrection(char filename[], int check);
 
 /// HIFN get the lens focal length (in m)
 double SLM_getLensFocalLength(void);

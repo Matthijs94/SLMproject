@@ -1,0 +1,48 @@
+[SimPanel_Callback]
+Class="Function"
+Prototype="int SimPanel_Callback(int panel, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SimCanvas_Callback]
+Class="Function"
+Prototype="int SimCanvas_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SimZoom_Callback]
+Class="Function"
+Prototype="int SimZoom_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SimToggle_Callback]
+Class="Function"
+Prototype="int SimToggle_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SimSaturation_Callback]
+Class="Function"
+Prototype="int SimSaturation_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SimGrid_Callback]
+Class="Function"
+Prototype="int SimGrid_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SimGridSpacing_Callback]
+Class="Function"
+Prototype="int SimGridSpacing_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SaveSim_Callback]
+Class="Function"
+Prototype="int SaveSim_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[AmplMod_Callback]
+Class="Function"
+Prototype="int AmplMod_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SimSuperSample_Callback]
+Class="Function"
+Prototype="int SimSuperSample_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SimHelmholtz_Callback]
+Class="Function"
+Prototype="int SimHelmholtz_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SimZPos_Callback]
+Class="Function"
+Prototype="int SimZPos_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

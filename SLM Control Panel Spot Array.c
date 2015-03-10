@@ -19,6 +19,7 @@
 #include "SLM Control Panel Internal.h"
 #include "toolbox.h"
 #include "SLM.h"
+#include "SLM_internal.h" 
 //#include "Camera Controller.h"
 
 
@@ -269,15 +270,31 @@ int CVICALLBACK PhaseRetrieval_Callback (int panel, int control, int event,
 			if (control == TABPANEL_5_PhaseRetrievalGo)
 			{
 				// yes, we have to start phase retrieval with the current parameters
-				SLM_generateSpotArray(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, panel, TABPANEL_5_Output,
+				// check if the asked spotpattern fits the SLM
+				if ((sigxoffset + spotxoffset + numxspots * (spotxspacing+1)) >= gXsize)
+				{
+					char msg[1024];
+					sprintf(msg, "The spotpattern exceeds the SLM size in the x-dimension. Adjust X spots or X spacing.");
+					InsertTextBoxLine (panel, TABPANEL_5_Output, -1, msg);
+				}
+				else if ((sigyoffset + spotyoffset + numyspots * (spotyspacing +1)) >= gYsize)
+				{
+					char msg[1024];
+					sprintf(msg, "The spotpattern exceeds the SLM size in the y-dimension. Adjust Y spots or Y spacing.");
+					InsertTextBoxLine (panel, TABPANEL_5_Output, -1, msg);
+				}
+				else
+				{
+					SLM_generateSpotArray(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, panel, TABPANEL_5_Output,
 	                       numxspots, numyspots, spotxspacing, spotyspacing, sigxoffset, sigyoffset, spotxoffset, spotyoffset, 
 						   phaseconstraint, phasestep * PI);
 				
-				// check if we need to update
-				if (eventData1 != SLM_NO_UPDATE)
-				{
-					// update the SLM panel and the simulation Panel (if toggled)
-					SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 1);
+					// check if we need to update
+					if (eventData1 != SLM_NO_UPDATE)
+					{
+						// update the SLM panel and the simulation Panel (if toggled)
+						SLM_update(pnlSLMpixels, SLMpixels_SLMcanvas, pnlSimPanel, SimPanel_CANVAS, 1);
+					}
 				}
 			}
 			
@@ -285,4 +302,5 @@ int CVICALLBACK PhaseRetrieval_Callback (int panel, int control, int event,
 		}
 	}
 	return 0;
+
 }

@@ -1,0 +1,32 @@
+[setPhaseGratingFromParameters]
+Class="Function"
+Prototype="void setPhaseGratingFromParameters();"
+
+[setSpotPatternFromParameters]
+Class="Function"
+Prototype="void setSpotPatternFromParameters();"
+
+[SpotControls_Callback]
+Class="Function"
+Prototype="int SpotControls_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SpotSize_Callback]
+Class="Function"
+Prototype="int SpotSize_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[rbPattern_Callback]
+Class="Function"
+Prototype="int rbPattern_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseGrating_Callback]
+Class="Function"
+Prototype="int PhaseGrating_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[GaussianPeaks_Callback]
+Class="Function"
+Prototype="int GaussianPeaks_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[PhaseRetrieval_Callback]
+Class="Function"
+Prototype="int PhaseRetrieval_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+

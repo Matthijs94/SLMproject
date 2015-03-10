@@ -10,6 +10,14 @@ Prototype="int LoadSLMPattern_Callback(int panel, int control, int event, void *
 Class="Function"
 Prototype="void LoadSLMSettings(char *slmfilename);"
 
+[LoadFactoryCorrection_Callback]
+Class="Function"
+Prototype="int LoadFactoryCorrection_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[FactorySwitch_Callback]
+Class="Function"
+Prototype="int FactorySwitch_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
 [WritePatternSettings]
 Class="Function"
 Prototype="void WritePatternSettings(struct MatFile_tag *pmat);"

@@ -1,0 +1,32 @@
+[SLM_setSpotPattern]
+Class="Function"
+Prototype="void SLM_setSpotPattern(unsigned int Nx, unsigned int Ny, double xspacing, double yspacing, double randomampl, double spotlens, unsigned int linspotlens);"
+
+[SLM_setPhaseGrating]
+Class="Function"
+Prototype="void SLM_setPhaseGrating(double a1, double b1, double a2, double b2, double angle);"
+
+[SLM_togglePhaseGratingGaussianPeaks]
+Class="Function"
+Prototype="void SLM_togglePhaseGratingGaussianPeaks(int gptoggle);"
+
+[SLM_generateSpotArray]
+Class="Function"
+Prototype="void SLM_generateSpotArray(int Panel, int Canvas, int SimPanel, int SimCanvas, int OutputPanel, int OutputTextBox, int numxspots, int numyspots, int spotxspacing, int spotyspacing, int sigxoffset, int sigyoffset, int spotxoffset, int spotyoffset, int phaseconstraint, double phasestep);"
+
+[SLM_calcBeamShapingPhase]
+Class="Function"
+Prototype="double *SLM_calcBeamShapingPhase(double *iix, double *iiy, int Nxi, int Nyi, double ixmin, double ixmax, double iymin, double iymax, double *isx, double *isy, int Nxs, int Nys, double sxmin, double sxmax, double symin, double symax, int center);"
+
+[SLM_generateBeamShape]
+Class="Function"
+Prototype="void SLM_generateBeamShape(double *isx, double *isy, int Nxs, int Nys, double sxmin, double sxmax, double symin, double symax, int center);"
+
+[SLM_generatePhase]
+Class="Function"
+Prototype="void SLM_generatePhase(double *ioriginal, int Nxo, int Nyo, int WindowX, int WindowY, int WindowXsize, int WindowYsize, int numPF, int numAF, double SigAmp, int keepcurrentphase, int softop, int MRAF, int storeUnresampledSignal);"
+
+[SLM_getUnresampledSignal]
+Class="Function"
+Prototype="double *SLM_getUnresampledSignal();"
+

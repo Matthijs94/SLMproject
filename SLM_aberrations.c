@@ -25,8 +25,8 @@ void SLM_SetShackHartmannPattern(double spotx, double spoty, double spotdiameter
 	for (int l = 0; l < gYsize; l++)
 	{
 		// compute the current (x, y) coordinate on the SLM	in meter
-		double xum = (-0.5 + ((double) k) / ((double) gXsize - 1)) * LxSLM;
-		double yum = (-0.5 + ((double) l) / ((double) gYsize - 1)) * LySLM;
+		double xum = (-0.5 + (k) / ((double) gXsize - 1)) * LxSLM;
+		double yum = (-0.5 + (l) / ((double) gYsize - 1)) * LySLM;
 		
 		// is this pixel part of the spot?
 		double dx = xum - spotx;
@@ -38,8 +38,8 @@ void SLM_SetShackHartmannPattern(double spotx, double spoty, double spotdiameter
 		}
 		else
 		{
-			// no, not part of the spot, but part of the stray light
-			gSLMphase[k + l * gXsize] = (2 * PI * (((double) k) / ((double) gXsize - 1)) * (strayx / gFocalUnitX)) 
+			// no, not part of the spot, but part of the stray light Switched 2 Pi for 256
+			gSLMphase[k + l * gXsize] = (double) (2 * PI * (((double) k) / ((double) gXsize - 1)) * (strayx / gFocalUnitX)) 
 									  + (2 * PI * (((double) l) / ((double) gYsize - 1)) * (strayy / gFocalUnitY));
 		}
 		
