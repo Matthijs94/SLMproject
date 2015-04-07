@@ -14,9 +14,9 @@ Active Project = 1
 Project 0001 = "SLM Controller.prj"
 Drag Bar Left = 276
 Window Top = 172
-Window Left = 121
+Window Left = 174
 Window Bottom = 886
-Window Right = 1646
+Window Right = 1699
 Maximized = True
 Maximized Children = True
 Max32 Number Of Errors = 20
@@ -30,7 +30,7 @@ Save Changes Before Compiling = "Always"
 Hide Windows = False
 Break At First Statement = False
 Sort Type = "File Name"
-Number of Opened Files = 8
+Number of Opened Files = 9
 Window Confinement Region Enabled = True
 MainColumnWidth = 259
 FileDateColumnWidth = 70
@@ -40,7 +40,7 @@ FileSizeColumnWidth = 70
 Version = 1300
 Don't Update DistKit = False
 Platform Code = 4
-Build Configuration = "Debug"
+Build Configuration = "Release"
 Warn User If Debugging Release = 0
 Batch Build Release = False
 Batch Build Debug = False
@@ -48,17 +48,17 @@ Batch Build Debug = False
 [File 0001]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_general.c"
 File Type = "CSource"
-Disk Date = 3508833523
+Disk Date = 3510840269
 In Projects = "1,"
 Window Top = 25
 Window Left = 6
-Window Z-Order = 1
-Source Window State = "1,106,106,106,0,6,6,0,0,201,0,176,0,0,0,53,54,0,91,83,349,683,1,14,"
+Window Z-Order = 2
+Source Window State = "1,215,215,215,4,20,20,0,3,80,0,138,0,0,0,25,180,0,215,4,349,683,1,14,"
 
 [File 0002]
 Path = "/c/Users/Admini/Desktop/SLM/SLM Controller UvA/SLM Control Panel.c"
 File Type = "CSource"
-Disk Date = 3473785982
+Disk Date = 3473789582
 In Projects = ""
 Window Top = 23
 Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,44,0,50,13,400,600,1,0,"
@@ -66,333 +66,329 @@ Breakpoint 0001 = "52,0,enabled,"
 Breakpoint 0002 = "55,0,enabled,"
 
 [File 0003]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel.c"
-File Type = "CSource"
-Disk Date = 3508151568
-In Projects = "1,"
-Window Top = 23
-Window Z-Order = 4
-Source Window State = "1,177,177,177,4,23,23,0,0,70,0,155,0,0,0,28,37,0,62,8,400,600,1,11,"
-
-[File 0004]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel General.c"
-File Type = "CSource"
-Disk Date = 3507630854
-In Projects = "1,"
-Window Top = 25
-Window Left = 6
-Window Z-Order = 5
-Source Window State = "1,545,545,545,12,22,22,0,3,80,0,0,0,0,0,25,21,0,545,12,349,683,1,0,"
-
-[File 0005]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Load Save.c"
-File Type = "CSource"
-Disk Date = 3508751253
-In Projects = "1,"
-Window Top = 186
-Window Left = 90
-Window Z-Order = 7
-Source Window State = "1,232,232,232,16,37,37,0,3,82,0,0,0,0,0,25,209,0,232,16,349,699,1,0,"
-
-[File 0006]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel general.c"
-File Type = "CSource"
-Disk Date = 3474560964
-In Projects = "1,"
-Window Top = 25
-Window Left = 6
-Window Z-Order = 8
-Source Window State = "1,450,450,450,16,32,32,0,0,82,0,0,0,0,0,13,158,0,195,24,193,699,1,0,"
-
-[File 0007]
-Path = "/c/Program Files (x86)/National Instruments/CVI2013/include/userint.h"
-File Type = "Include"
-Disk Date = 3464687974
-In Projects = ""
-Window Top = 48
-Window Left = 18
-Window Z-Order = 6
-Source Window State = "1,0,0,0,0,0,0,0,0,82,0,0,0,0,0,25,2631,0,2649,74,349,699,1,0,"
-
-[File 0008]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_simulation.c"
-File Type = "CSource"
-Disk Date = 3468342998
-In Projects = "1,"
-Window Top = 117
-Window Left = 54
-Window Z-Order = 2
-Source Window State = "1,280,280,280,39,49,49,0,3,82,0,0,0,0,0,25,268,0,280,39,349,699,1,0,"
-
-[File 0009]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_internal.h"
-File Type = "Include"
-Disk Date = 3508833486
-In Projects = "1,"
-Window Top = 140
-Window Left = 66
-Window Z-Order = 3
-Source Window State = "1,55,55,55,22,32,32,0,3,82,0,0,0,0,0,25,43,0,55,22,349,699,1,0,"
-
-[File 0010]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel.uir"
 File Type = "User Interface Resource"
-Disk Date = 3508830275
+Disk Date = 3511252281
 In Projects = "1,"
 Window Top = 25
 Window Left = 6
 Window Height = 349
 Window Width = 699
+Window Z-Order = 4
 
-[File 0011]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel Calibration.c"
+[File 0004]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Load Save.c"
 File Type = "CSource"
-Disk Date = 3473783008
-In Projects = "1,"
-Window Top = 209
-Window Left = 102
-Source Window State = "1,104,104,104,12,22,22,0,3,0,0,0,0,0,0,0,92,0,104,12,349,699,1,0,"
-
-[File 0012]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel Feedback.c"
-File Type = "CSource"
-Disk Date = 3473782990
-In Projects = "1,"
-Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
-
-[File 0013]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel Measurement.c"
-File Type = "CSource"
-Disk Date = 3468342536
+Disk Date = 3510823887
 In Projects = "1,"
 Window Top = 186
 Window Left = 90
-Source Window State = "1,451,451,451,20,30,30,0,3,0,0,0,0,0,0,0,425,0,451,20,349,699,1,0,"
+Source Window State = "1,375,375,375,35,46,46,0,0,82,0,322,0,0,0,25,340,0,353,170,349,699,1,14,"
 
-[File 0014]
+[File 0005]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM.h"
+File Type = "Include"
+Disk Date = 3510237111
+In Projects = "1,"
+Window Top = 94
+Window Left = 42
+Source Window State = "1,186,186,186,5,28,28,0,3,82,0,0,0,0,0,25,174,0,186,5,349,699,1,0,"
+
+[File 0006]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel general.c"
+File Type = "CSource"
+Disk Date = 3510320522
+In Projects = "1,"
+Window Top = 25
+Window Left = 6
+Source Window State = "1,752,752,752,7,22,22,0,0,82,0,718,0,0,0,13,364,0,370,39,193,699,1,0,"
+
+[File 0007]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_support.c"
+File Type = "CSource"
+Disk Date = 3509018028
+In Projects = "1,"
+Window Top = 163
+Window Left = 78
+Source Window State = "1,1220,1220,1220,5,28,28,0,3,82,0,47,0,0,0,25,1214,0,1220,5,349,699,1,11,"
+
+[File 0008]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel Calibration.c"
+File Type = "CSource"
+Disk Date = 3473786608
+In Projects = "1,"
+Window Top = 209
+Window Left = 102
+Source Window State = "1,740,740,740,16,35,35,0,3,0,0,517,0,0,0,0,711,0,740,16,349,699,1,14,"
+
+[File 0009]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel Feedback.c"
+File Type = "CSource"
+Disk Date = 3473786590
+In Projects = "1,"
+Window Top = 25
+Window Left = 6
+Source Window State = "1,266,266,266,30,39,39,0,3,0,0,0,0,0,0,0,224,0,266,30,349,731,1,0,"
+
+[File 0010]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel Measurement.c"
+File Type = "CSource"
+Disk Date = 3468346136
+In Projects = "1,"
+Window Top = 186
+Window Left = 90
+Source Window State = "1,371,371,371,20,39,39,0,3,0,0,0,0,0,0,0,344,0,371,20,349,699,1,0,"
+
+[File 0011]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Beam Shaping.c"
 File Type = "CSource"
-Disk Date = 3468342604
+Disk Date = 3468346204
 In Projects = "1,"
 Window Top = 48
 Window Left = 18
 Source Window State = "1,489,489,489,16,26,26,0,3,0,0,0,0,0,0,0,447,0,489,16,349,699,1,0,"
 
-[File 0015]
+[File 0012]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Client Mode.c"
 File Type = "CSource"
-Disk Date = 3449478240
+Disk Date = 3449481840
 In Projects = "1,"
 Window Top = 71
 Window Left = 30
 Source Window State = "1,262,262,262,4,14,14,0,3,0,0,0,0,0,0,0,250,0,262,4,349,699,1,0,"
 
-[File 0016]
+[File 0013]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Feedback.c"
 File Type = "CSource"
-Disk Date = 3473783026
+Disk Date = 3473786626
 In Projects = "1,"
 Window Top = 117
 Window Left = 54
-Source Window State = "1,676,676,676,12,22,22,0,3,0,0,0,0,0,0,0,650,0,676,12,349,699,1,0,"
+Window Z-Order = 7
+Source Window State = "1,333,333,333,12,31,31,0,0,82,0,0,0,0,0,25,613,0,328,90,349,699,1,0,"
 
-[File 0017]
+[File 0014]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel General.c"
+File Type = "CSource"
+Disk Date = 3507634454
+In Projects = "1,"
+Window Top = 25
+Window Left = 6
+Source Window State = "1,513,513,513,16,42,42,0,3,0,0,0,0,0,0,0,487,0,513,16,349,683,1,0,"
+
+[File 0015]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Phase Error.c"
 File Type = "CSource"
-Disk Date = 3468342710
+Disk Date = 3468346310
 In Projects = "1,"
 Window Top = 232
 Window Left = 114
-Source Window State = "1,758,758,758,12,22,22,0,3,0,0,0,0,0,0,0,732,0,758,12,349,699,1,0,"
+Window Z-Order = 9
+Source Window State = "1,75,75,75,12,46,46,0,3,82,0,0,0,0,0,25,40,0,75,12,349,699,1,0,"
 
-[File 0018]
+[File 0016]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel SH.c"
 File Type = "CSource"
-Disk Date = 3437977500
+Disk Date = 3510225581
 In Projects = "1,"
-Window Top = 301
-Window Left = 150
-Source Window State = "1,57,57,57,16,26,26,0,3,0,0,0,0,0,0,0,45,0,57,16,349,699,1,0,"
+Window Top = 25
+Window Left = 6
+Window Z-Order = 6
+Source Window State = "1,113,113,113,27,36,36,0,0,80,0,0,0,0,0,25,98,0,109,58,349,683,1,0,"
 
-[File 0019]
+[File 0017]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Spot Array.c"
 File Type = "CSource"
-Disk Date = 3507793378
+Disk Date = 3507796978
 In Projects = "1,"
 Window Top = 324
 Window Left = 162
-Source Window State = "1,295,295,295,24,34,34,0,3,0,0,0,0,0,0,0,254,0,295,24,349,699,1,0,"
+Source Window State = "1,295,295,295,24,34,34,0,3,0,0,0,0,0,0,0,239,0,295,24,349,699,1,0,"
 
-[File 0020]
+[File 0018]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel.c"
+File Type = "CSource"
+Disk Date = 3508155168
+In Projects = "1,"
+Window Top = 23
+Source Window State = "1,177,177,177,4,23,23,0,0,0,0,155,0,0,0,0,100,0,129,4,400,600,1,11,"
+
+[File 0019]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Pixel Panel.c"
 File Type = "CSource"
-Disk Date = 3472653656
+Disk Date = 3472657256
 In Projects = "1,"
 Window Top = 163
 Window Left = 78
 Source Window State = "1,74,74,74,16,26,26,0,3,0,0,0,0,0,0,0,61,0,74,16,349,699,1,0,"
 
-[File 0021]
+[File 0020]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Simulation Panel.c"
 File Type = "CSource"
-Disk Date = 3468342902
+Disk Date = 3510237199
 In Projects = "1,"
 Window Top = 209
 Window Left = 102
-Source Window State = "1,77,77,77,12,22,22,0,3,0,0,0,0,0,0,0,65,0,77,12,349,699,1,0,"
+Source Window State = "1,182,190,190,8,62,62,0,0,0,0,0,0,0,0,0,146,0,181,1,349,699,1,0,"
 
-[File 0022]
+[File 0021]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_aberrations.c"
 File Type = "CSource"
-Disk Date = 3508831956
+Disk Date = 3511253617
 In Projects = "1,"
 Window Top = 48
 Window Left = 18
-Source Window State = "1,41,41,41,12,21,21,0,3,0,0,0,0,0,0,0,0,0,41,12,271,683,1,0,"
+Window Z-Order = 1
+Source Window State = "1,97,98,97,0,0,0,0,0,201,0,0,0,0,0,53,64,0,85,54,271,683,1,0,"
 
-[File 0023]
+[File 0022]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_characterisation.c"
 File Type = "CSource"
-Disk Date = 3468342928
+Disk Date = 3468346528
 In Projects = "1,"
 Window Top = 232
 Window Left = 114
-Source Window State = "1,477,477,477,4,14,14,0,3,0,0,0,0,0,0,0,451,0,477,4,349,699,1,0,"
+Window Z-Order = 5
+Source Window State = "1,118,119,118,0,0,0,0,0,82,0,0,0,0,0,25,142,0,118,37,349,699,1,0,"
 
-[File 0024]
+[File 0023]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_genetic.c"
 File Type = "CSource"
-Disk Date = 3431490840
+Disk Date = 3431494440
 In Projects = "1,"
 Window Top = 23
-Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,43,0,64,24,400,600,1,0,"
+Source Window State = "1,187,187,187,12,19,19,0,3,0,0,0,0,0,0,0,161,0,187,12,400,600,1,0,"
 
-[File 0025]
+[File 0024]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_patterns.c"
 File Type = "CSource"
-Disk Date = 3507791762
+Disk Date = 3507795362
 In Projects = "1,"
 Window Top = 71
 Window Left = 30
-Source Window State = "1,16,16,16,11,18,18,0,3,0,0,0,0,0,0,0,0,0,16,11,271,683,1,0,"
+Source Window State = "1,76,76,76,12,21,21,0,0,0,0,66,0,0,0,0,358,0,93,59,271,683,1,11,"
+
+[File 0025]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_simulation.c"
+File Type = "CSource"
+Disk Date = 3510237075
+In Projects = "1,"
+Window Top = 117
+Window Left = 54
+Source Window State = "1,570,570,570,25,28,28,0,0,0,0,0,0,0,0,0,553,0,570,33,349,699,1,0,"
 
 [File 0026]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_support.c"
-File Type = "CSource"
-Disk Date = 3472654522
-In Projects = "1,"
-Window Top = 163
-Window Left = 78
-Source Window State = "1,577,577,577,8,25,25,0,3,0,0,47,0,0,0,0,571,0,577,8,349,699,1,11,"
-
-[File 0027]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_Zernike.c"
 File Type = "CSource"
-Disk Date = 3431422560
+Disk Date = 3431426160
 In Projects = "1,"
-Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+Window Top = 25
+Window Left = 6
+Window Z-Order = 8
+Source Window State = "1,1178,1179,1178,0,0,0,0,0,86,0,0,0,0,0,25,1154,0,1181,39,349,731,1,0,"
 
-[File 0028]
+[File 0027]
 Path = "/c/Program Files (x86)/SLM Controller UvA/FlyCapture2/FlyCapture2_C.h"
 File Type = "Include"
-Disk Date = 3479138002
+Disk Date = 3479141602
 In Projects = "1,"
 Window Top = 25
 Window Left = 6
 Source Window State = "1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,271,683,1,0,"
 
-[File 0029]
+[File 0028]
 Path = "/c/Program Files (x86)/SLM Controller UvA/UCP/General_DLL.h"
 File Type = "Include"
-Disk Date = 3472555238
+Disk Date = 3472558838
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0030]
+[File 0029]
 Path = "/c/Program Files (x86)/SLM Controller UvA/libmat/libmat/mat.h"
 File Type = "Include"
 Disk Date = 0
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0031]
+[File 0030]
 Path = "/c/Program Files (x86)/SLM Controller UvA/libmat/matrix.h"
 File Type = "Include"
-Disk Date = 3409934404
+Disk Date = 3409938004
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0032]
+[File 0031]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Camera Panel.h"
 File Type = "Include"
-Disk Date = 3473782978
+Disk Date = 3510320462
 In Projects = "1,"
 Window Top = 48
 Window Left = 18
-Source Window State = "1,112,112,112,5,32,32,0,0,0,0,0,0,0,0,0,95,0,113,61,336,699,1,0,"
+Source Window State = "1,114,115,115,8,8,8,0,0,0,0,96,0,0,0,0,96,0,108,7,336,699,1,14,"
 
-[File 0033]
+[File 0032]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel Internal.h"
 File Type = "Include"
-Disk Date = 3508151228
+Disk Date = 3508154828
 In Projects = "1,"
 Window Top = 140
 Window Left = 66
-Source Window State = "1,28,28,28,0,30,30,0,0,0,0,0,0,0,0,0,0,0,27,37,349,699,1,11,"
+Source Window State = "1,30,30,30,5,25,25,0,3,0,0,0,0,0,0,0,17,0,30,5,349,699,1,11,"
 
-[File 0034]
+[File 0033]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM Control Panel.h"
 File Type = "Include"
-Disk Date = 3508830275
+Disk Date = 3511252282
 In Projects = "1,"
 Window Top = 48
 Window Left = 18
-Source Window State = "1,377,377,377,17,34,34,0,0,0,0,0,0,0,0,0,372,0,356,74,349,699,1,0,"
+Source Window State = "1,326,326,326,50,91,91,0,0,0,0,364,0,0,0,0,304,0,329,91,349,699,1,14,"
+
+[File 0034]
+Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_internal.h"
+File Type = "Include"
+Disk Date = 3510837567
+In Projects = "1,"
+Window Top = 140
+Window Left = 66
+Window Z-Order = 3
+Source Window State = "1,65,65,65,15,31,31,0,3,82,0,0,0,0,0,25,25,0,65,15,349,699,1,0,"
 
 [File 0035]
-Path = "/c/Program Files (x86)/SLM Controller UvA/SLM.h"
-File Type = "Include"
-Disk Date = 3508751874
-In Projects = "1,"
-Window Top = 94
-Window Left = 42
-Source Window State = "1,45,46,46,0,29,29,0,0,0,0,0,0,0,0,0,25,0,44,0,349,699,1,0,"
-
-[File 0036]
 Path = "/c/Program Files (x86)/SLM Controller UvA/SLM_Zernike.h"
 File Type = "Include"
-Disk Date = 3437977500
+Disk Date = 3437981100
 In Projects = "1,"
 Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
 
-[File 0037]
+[File 0036]
 Path = "/c/Program Files (x86)/SLM Controller UvA/FFTW/fftw3.lib"
 File Type = "Library"
-Disk Date = 3472555238
+Disk Date = 3472558838
+In Projects = "1,"
+
+[File 0037]
+Path = "/c/Program Files (x86)/SLM Controller UvA/FlyCapture2/FlyCapture2_C.lib"
+File Type = "Library"
+Disk Date = 3479828958
 In Projects = "1,"
 
 [File 0038]
-Path = "/c/Program Files (x86)/SLM Controller UvA/FlyCapture2/FlyCapture2_C.lib"
+Path = "/c/Program Files (x86)/SLM Controller UvA/UCP/General_DLL.lib"
 File Type = "Library"
-Disk Date = 3479825358
+Disk Date = 3472558838
 In Projects = "1,"
 
 [File 0039]
-Path = "/c/Program Files (x86)/SLM Controller UvA/UCP/General_DLL.lib"
+Path = "/c/Users/Admini/Desktop/SLM/SLM Controller UvA/libmat/libmat.lib"
 File Type = "Library"
-Disk Date = 3472555238
+Disk Date = 3472558838
 In Projects = "1,"
 
 [File 0040]
-Path = "/c/Users/Admini/Desktop/SLM/SLM Controller UvA/libmat/libmat.lib"
-File Type = "Library"
-Disk Date = 3472555238
-In Projects = "1,"
-
-[File 0041]
 Path = "/c/Users/Admini/Desktop/SLM/SLM Controller UvA/libmat/libmx.lib"
 File Type = "Library"
-Disk Date = 3472555238
+Disk Date = 3472558838
 In Projects = "1,"
 
 [Default Build Config 0001 Debug]

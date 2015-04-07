@@ -1,4 +1,0 @@
-[SLM_SetShackHartmannPattern]
-Class="Function"
-Prototype="void SLM_SetShackHartmannPattern(double spotx, double spoty, double spotdiameter, double strayx, double strayy);"
-

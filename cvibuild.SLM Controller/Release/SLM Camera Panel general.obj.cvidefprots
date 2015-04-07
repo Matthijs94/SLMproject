@@ -38,6 +38,10 @@ Prototype="int CameraGrid_Callback(int panel, int control, int event, void *call
 Class="Function"
 Prototype="int CameraGridSpacing_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[GiveIntensities]
+Class="Function"
+Prototype="double *GiveIntensities(Xmax, Xmin, Ymax, Ymin);"
+
 [TransformCamCanvasToBitmapX]
 Class="Function"
 Prototype="int TransformCamCanvasToBitmapX(int cx);"

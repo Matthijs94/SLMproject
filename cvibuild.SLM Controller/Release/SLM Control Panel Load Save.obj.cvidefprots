@@ -18,6 +18,18 @@ Prototype="int LoadFactoryCorrection_Callback(int panel, int control, int event,
 Class="Function"
 Prototype="int FactorySwitch_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
 
+[LoadSHcorrection_Callback]
+Class="Function"
+Prototype="int LoadSHcorrection_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[SHswitch_Callback]
+Class="Function"
+Prototype="int SHswitch_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
+[IntensityMatrix_Callback]
+Class="Function"
+Prototype="int IntensityMatrix_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);"
+
 [WritePatternSettings]
 Class="Function"
 Prototype="void WritePatternSettings(struct MatFile_tag *pmat);"

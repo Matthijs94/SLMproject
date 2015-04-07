@@ -22,6 +22,7 @@
 #include "SLM Camera Panel.h"
 #include "SLM_internal.h"
 
+
  
 // Make the file name for the correction file
 char FactoryCorrectionFilename[1024];
@@ -241,7 +242,7 @@ int CVICALLBACK LoadFactoryCorrection_Callback(int panel, int control, int event
 				if (FactoryCorrectionCheck) 
 				LoadFactoryCorrection(FactoryCorrectionFilename, FactoryCorrectionCheck);
 				
-			}
+			}						 
 			// display the file name onto the load panel
 			SetCtrlVal(TabPage_5, TABPANEL_9_FactoryCorrection, FactoryCorrectionFilename);
 			
@@ -347,6 +348,41 @@ int CVICALLBACK SHswitch_Callback(int panel, int control, int event,
 	return 0;
 }
 	
+
+int CVICALLBACK IntensityMatrix_Callback(int panel, int control, int event, void *callbackData, 
+		int eventData1, int eventData2)   
+{
+	switch(event)
+	{
+		case EVENT_COMMIT:
+			{
+				// Get location of the box of the intensities wanted (in pixels)
+				int Xmin, Xmax, Ymin, Ymax;
+				GetCtrlVal(panel, TABPANEL_9_Xmax, &Xmax);
+				GetCtrlVal(panel, TABPANEL_9_Xmin, &Xmin);
+				GetCtrlVal(panel, TABPANEL_9_Ymax, &Ymax);
+				GetCtrlVal(panel, TABPANEL_9_Ymin, &Ymin);
+				double *intensitymatrix = GiveIntensities(Xmax, Xmin, Ymax, Ymin);
+				// write to a matlab file
+				// let the user specify a filename
+				char matrixfilename[1024];
+			    int SelectionStatus = FileSelectPopup("", "*.csv", "*.csv", "Save Intensity Matrix", 
+										VAL_OK_BUTTON, 0, 1, 1, 1, matrixfilename);
+			
+				if (SelectionStatus > 0)
+				{
+					// create and open a Matlab file for saving the data
+					//MATFILE *pmat;
+					//fp = fopen(matrixfilename, "w");
+					//writeMatDoubleArray(pmat, "intensitymatrix", intensitymatrix, (Xmax - Xmin), (Ymax - Ymin));
+					
+				}
+				break;
+			}
+	}
+	return 0;
+}
+
 /// HIFN writes the control panel pattern settings to file
 void WritePatternSettings(MATFile *pmat)
 {

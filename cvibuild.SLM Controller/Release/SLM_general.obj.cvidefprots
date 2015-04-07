@@ -30,6 +30,10 @@ Prototype="void SLM_setVertTrans(double vtrans);"
 Class="Function"
 Prototype="void SLM_setLensPhase(double xstrength, double ystrength);"
 
+[SLM_SetShackHartmannPattern]
+Class="Function"
+Prototype="void SLM_SetShackHartmannPattern(double spotx, double spoty, double spotdiameter, double strayx, double strayy);"
+
 [SLM_updateLensPattern]
 Class="Function"
 Prototype="void SLM_updateLensPattern();"
@@ -38,9 +42,9 @@ Prototype="void SLM_updateLensPattern();"
 Class="Function"
 Prototype="void LoadFactoryCorrection(char *filename, int Check);"
 
-[ClearFactoryCorrection]
+[LoadSHcorrection]
 Class="Function"
-Prototype="void ClearFactoryCorrection();"
+Prototype="void LoadSHcorrection(char *filename, int check);"
 
 [SLM_setLensFocalLength]
 Class="Function"

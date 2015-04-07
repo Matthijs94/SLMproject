@@ -83,7 +83,7 @@ void SLM_setLensPhase(double xstrength, double ystrength);
 void SLM_setAberrationCorrection(double* gZernikeCoefficients, int Nz, int mx, int my);
 
 /// HIFN toggle the simulation
-void SLM_toggleSim(unsigned int sim, unsigned int simphase);
+void SLM_toggleSim(unsigned int sim, unsigned int simphase, unsigned int simpixel);
 
 /// HIFN set the simulation saturation, relative to the maximum intensity
 void SLM_setSimSaturation(double simsat);

@@ -749,6 +749,22 @@ int CVICALLBACK CameraGridSpacing_Callback (int panel, int control, int event,
 }
 
 
+/// HIFN Function that returns a matrix with the intensities in a defined box
+double* GiveIntensities(Xmax, Xmin, Ymax, Ymin)
+{
+	int Xsize = Xmax - Xmin;
+	int Ysize = Ymax - Ymin;
+	double *intensitymatrix = NULL;
+	intensitymatrix = calloc(Xsize * Ysize, sizeof(double));
+	// fill the histogram arrays
+	for (int k = Xmin; k < Xmax; k++)
+	for (int l = Ymin; l < Ymax; l++)
+		intensitymatrix[(k - Xmin) + Xsize * (l - Ymin)] = gAvgFrame[k + l * gCamX];
+	
+	return intensitymatrix;
+}
+	
+	
 /// HIFN Function that calculates the x-coordinate in bitmap space, from a given canvas x-coordinate
 int TransformCamCanvasToBitmapX(int cx)
 {

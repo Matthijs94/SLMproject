@@ -80,6 +80,7 @@
 #define  SimPanel_SaveSim                 11      /* control type: command, callback function: SaveSim_Callback */
 #define  SimPanel_AmplMod                 12      /* control type: scale, callback function: AmplMod_Callback */
 #define  SimPanel_SimSuperSample          13      /* control type: radioButton, callback function: SimSuperSample_Callback */
+#define  SimPanel_SLMpixeltoggle          14      /* control type: radioButton, callback function: SimToggle_Callback */
 
 #define  SLMpixels                        5       /* callback function: SLMpixels_Callback */
 #define  SLMpixels_SLMcanvas              2       /* control type: canvas, callback function: (none) */
@@ -323,12 +324,16 @@
 #define  TABPANEL_9_SHcorrection          11      /* control type: string, callback function: (none) */
 #define  TABPANEL_9__LoadSHcorrection     12      /* control type: command, callback function: LoadSHcorrection_Callback */
 #define  TABPANEL_9_SHswitch              13      /* control type: radioButton, callback function: SHswitch_Callback */
+#define  TABPANEL_9_Xmin                  14      /* control type: numeric, callback function: (none) */
+#define  TABPANEL_9_Xmax                  15      /* control type: numeric, callback function: (none) */
+#define  TABPANEL_9_Ymin                  16      /* control type: numeric, callback function: (none) */
+#define  TABPANEL_9_Ymax                  17      /* control type: numeric, callback function: (none) */
+#define  TABPANEL_9_IntensityMatrix       18      /* control type: command, callback function: IntensityMatrix_Callback */
 
 
      /* Control Arrays: */
 
-          /* (no control arrays in the resource file) */
-
+#define  CTRLARRAY                        1
 
      /* Menu Bars, Menus, and Menu Items: */
 
@@ -375,6 +380,7 @@ int  CVICALLBACK HorizTrans_Callback(int panel, int control, int event, void *ca
 int  CVICALLBACK InitPhaseError_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK InputIntensity_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK InputLoadFromFile_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
+int  CVICALLBACK IntensityMatrix_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK itcalc(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK Lens_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);
 int  CVICALLBACK LensFocalLength_Callback(int panel, int control, int event, void *callbackData, int eventData1, int eventData2);

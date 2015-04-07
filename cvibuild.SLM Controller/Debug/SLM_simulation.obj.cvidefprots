@@ -32,7 +32,7 @@ Prototype="void SLM_setSimZPos(double zpos);"
 
 [SLM_toggleSim]
 Class="Function"
-Prototype="void SLM_toggleSim(unsigned int sim, unsigned int simphase);"
+Prototype="void SLM_toggleSim(unsigned int sim, unsigned int simphase, unsigned int simpixel);"
 
 [SLM_setSimSaturation]
 Class="Function"

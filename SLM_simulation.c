@@ -20,6 +20,9 @@ int gSimCanvasXsize, gSimCanvasYsize;
 // simulate intensity (1) or not (0)
 unsigned int gSimulate;
 
+// simulate SLMpixels (1) or not (0)
+unsigned int gSimulateSLMpixels;
+
 // show the phase instead of intensity in the simulation
 unsigned int gSimPhase;
 
@@ -560,11 +563,12 @@ void SLM_setSimZPos(double zpos)
 
 
 /// HIFN toggle the simulation
-void SLM_toggleSim(unsigned int sim, unsigned int simphase)
+void SLM_toggleSim(unsigned int sim, unsigned int simphase, unsigned int simpixel)
 {
 	// update the indicator variables
 	gSimulate = sim;	
 	gSimPhase = simphase;
+	gSimulateSLMpixels = simpixel;
 }
 
 

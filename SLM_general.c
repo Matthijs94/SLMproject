@@ -24,6 +24,9 @@ int gYsize;
 // simulate intensity (1) or not (0)
 unsigned int gSimulate;
 
+// simulate SLMpixels (1) or not (0)
+unsigned int gSimulateSLMpixels;
+
 // show the phase instead of intensity in the simulation
 unsigned int gSimPhase;
 
@@ -77,6 +80,9 @@ double* gSLMFPtotal;
 // the SLM horizontal and vertical translation phase patterns
 double* gSLMhtrans;
 double* gSLMvtrans;
+
+// the SH correction for the SLM
+double* gSLMSHpattern;
 
 // the factory correction and the SH correction to the SLM phase pattern
 double* gSLMFactoryCorrection;
@@ -194,14 +200,15 @@ void SLM_initialise(int Xsize, int Ysize, int SimXsize, int SimYsize, int SubSam
 	// initialize the SLM phase pattern and the corrections (translations and lens phases)
 	gSLMphase      = (double *) realloc(gSLMphase,      gXsize * gYsize * sizeof(double));
 	gSLMtotal      = (double *) realloc(gSLMtotal,      gXsize * gYsize * sizeof(double));
-	gSLMhtrans     = (unsigned char *) realloc(gSLMhtrans,             gCanvasXsize * sizeof(double));
-	gSLMvtrans     = (unsigned char *) realloc(gSLMvtrans,             gCanvasYsize * sizeof(double));
+	gSLMhtrans     = (double *) realloc(gSLMhtrans,             gCanvasXsize * sizeof(double));
+	gSLMvtrans     = (double *) realloc(gSLMvtrans,             gCanvasYsize * sizeof(double));
 	gSLMLensX       = (unsigned char *) realloc(gSLMLensX, gCanvasXsize * sizeof(unsigned char));
 	gSLMLensY       = (unsigned char *) realloc(gSLMLensY, gCanvasYsize * sizeof(unsigned char));
 	gSLMXsquared    = (double *) realloc(gSLMXsquared,  gCanvasXsize * sizeof(double));
 	gSLMYsquared    = (double *) realloc(gSLMYsquared,  gCanvasYsize * sizeof(double));
 	gSLMaberration = (double *) realloc(gSLMaberration, gXsize * gYsize * sizeof(double));
 	gSignal        = (double *) realloc(gSignal,        gXsize * gYsize * sizeof(double));
+	gSLMSHpattern =  (double *) realloc(gSLMSHpattern, gXsize * gYsize * sizeof(double));
 	
 	// (re)allocate memory for the input intensity arrays
 	gInputAmplitude  = (double*) realloc(gInputAmplitude, gXsize * gYsize * sizeof(double));
@@ -251,6 +258,11 @@ void SLM_initialise(int Xsize, int Ysize, int SimXsize, int SimYsize, int SubSam
 	SLM_setAberrationCorrection(NULL, 0, 0, 0);
 	SLM_setHorizTrans(gHorizTrans);
 	SLM_setVertTrans(gVertTrans);
+	SLM_SetShackHartmannPattern(0, 0, 1000, gHorizTrans, gVertTrans);
+	
+	
+	// Load the factory correction
+	LoadFactoryCorrection("C:/Program Files (x86)/SLM Controller UvA/780_correction.png" , 1);
 	
 	// fill the colormap, following the pattern AARRGGBB
 	for (int k = 0; k < 256; k++)
@@ -263,10 +275,10 @@ void SLM_initialise(int Xsize, int Ysize, int SimXsize, int SimYsize, int SubSam
 		gSLMFPtotal = (double *) realloc(gSLMFPtotal, gCanvasXsize * gCanvasYsize * sizeof(double));
 
 	// allocate memory for the final SLM pixels
-	gSLMPixels = (double*) realloc(gSLMPixels, gCanvasXsize * gCanvasYsize * sizeof(double));
+	gSLMPixels = (double *) realloc(gSLMPixels, gCanvasXsize * gCanvasYsize * sizeof(double));
 
 	// initialize the bitmap with the SLM pattern pixel data
-	gSLMPatternPixels = (double*) realloc(gSLMPatternPixels, gCanvasXsize * gCanvasYsize * sizeof(double));
+	gSLMPatternPixels = (double *) realloc(gSLMPatternPixels, gCanvasXsize * gCanvasYsize * sizeof(double));
 	NewBitmap(-1, 8, gCanvasXsize, gCanvasYsize, gSLMColorMap, gSLMPatternPixels, NULL, &gBitmap);
 
 	// check if the FFT variables were already initialised
@@ -311,8 +323,7 @@ void SLM_update(int Panel, int Canvas, int SimPanel, int SimCanvas, int pattern_
 		{
 			// variables for determining the color of the current pixel
 			double pixelval;
-			int pixelindex;
-
+			
 			// get the phase for this pixel
 			pixelval = gSLMphase[l * gXsize + k];
 
@@ -349,7 +360,7 @@ void SLM_update(int Panel, int Canvas, int SimPanel, int SimCanvas, int pattern_
 		if (gSLMFactoryCorrection == NULL && gSLMSHcorrection == NULL)
 		{
 			gSLMPixels[k + l * gCanvasXsize] = (gSLMPatternPixels[k + l * gCanvasXsize] + gSLMhtrans[k]
-										 + gSLMvtrans[l] + gSLMLensX[k] + gSLMLensY[l] + gBias);
+										 + gSLMvtrans[l] + gSLMLensX[k] + gSLMLensY[l] + gBias + gSLMSHpattern[k + l * gCanvasXsize]);
 		}
 		else if (gSLMFactoryCorrection != NULL && gSLMSHcorrection != NULL)
 		{
@@ -359,7 +370,7 @@ void SLM_update(int Panel, int Canvas, int SimPanel, int SimCanvas, int pattern_
 		else if (gSLMFactoryCorrection != NULL && gSLMSHcorrection == NULL)
 		{
 			gSLMPixels[k + l * gCanvasXsize] = (gSLMPatternPixels[k + l * gCanvasXsize] + gSLMhtrans[k]
-										 + gSLMvtrans[l] + gSLMLensX[k] + gSLMLensY[l] + gBias + gSLMFactoryCorrection[k + l * gCanvasXsize]);
+										 + gSLMvtrans[l] + gSLMLensX[k] + gSLMLensY[l] + gBias + gSLMFactoryCorrection[k + l * gCanvasXsize] + gSLMSHpattern[k + l * gCanvasXsize]);
 		}
 		else if (gSLMFactoryCorrection == NULL && gSLMSHcorrection != NULL)
 		{
@@ -380,6 +391,9 @@ void SLM_update(int Panel, int Canvas, int SimPanel, int SimCanvas, int pattern_
 	// check if we also have to update the simulated intensity
 	if (gSimulate == 1)
 		SLM_simulateIntensity(SimPanel, SimCanvas);
+	// check if we want to show the SLM pixels
+	if (gSimulateSLMpixels == 1)
+		CanvasDrawBitmap(SimPanel, SimCanvas, gBitmap, VAL_ENTIRE_OBJECT, VAL_ENTIRE_OBJECT);
 }
 
 
@@ -515,7 +529,7 @@ void SLM_setVertTrans(double vtrans)
 
 	// update the vertical translation pattern
 	for (int l = 0; l < gCanvasYsize; l++)
-		gSLMvtrans[l] = (unsigned char) (256.0 * (((double) l) / ((double) gCanvasYsize)) * (vtrans / gFocalUnitY));
+		gSLMvtrans[l] = (double) (256.0 * (((double) l) / ((double) gCanvasYsize)) * (vtrans / gFocalUnitY));
 }
 
 
@@ -529,6 +543,41 @@ void SLM_setLensPhase(double xstrength, double ystrength)
 	// update the lens phase pattern
 	SLM_updateLensPattern();
 }
+
+/// HIFN sets a pattern used for Shack-Hartmann aberration correction
+void SLM_SetShackHartmannPattern(double spotx, double spoty, double spotdiameter, double strayx, double strayy)
+{
+	// loop over all the pixels of the SLM
+	for (int k = 0; k < gXsize; k++)
+	for (int l = 0; l < gYsize; l++)
+	{
+		// compute the current (x, y) coordinate on the SLM	in meter
+		double xum = (-0.5 + (k) / ((double) gXsize - 1)) * LxSLM;
+		double yum = (-0.5 + (l) / ((double) gYsize - 1)) * LySLM;
+		
+		// is this pixel part of the spot?
+		double dx = xum - spotx;
+		double dy = yum - spoty;
+		if ((dx * dx + dy * dy) < (spotdiameter * spotdiameter) / 4.0)
+		{
+			// yes, part of the spot
+			gSLMSHpattern[k + l * gXsize] = (double) (256 * ((double)k / ((double)gXsize - 1)) * ((strayx) / gFocalUnitX)) 
+									  + (double) (256 * ((double)l / ((double)gYsize - 1)) * ((strayy) / gFocalUnitY));	 
+		}
+		else
+		{
+			// no, not part of the spot, but part of the stray light Switched 2 Pi for 256
+			//gSLMphase[k + l * gXsize] = (double) (2 * PI * (((double) k) / ((double) gXsize - 1)) * (strayx / gFocalUnitX)) 
+			//+ (2 * PI * (((double) l) / ((double) gYsize - 1)) * (strayy / gFocalUnitY));
+			gSLMSHpattern[k +l * gXsize] = 0;
+		}
+		
+	}
+	
+	// set the current pattern indicator
+	//gCurrentPattern = SLM_SHACKHARTMANN;
+}
+
 
 
 /// HIFN calculates the lens phase pattern from the current settings

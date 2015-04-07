@@ -105,6 +105,8 @@ void performCameraAveraging(void);
 /// HIFN return the number of frames the camera uses for averaging
 int getCameraNumAveragingFrames(void);
 
+/// HIFN return a matrix with intensities from the camera in a specified box
+double* GiveIntensities(int Xmax, int Xmin, int Ymax, int Ymin);
 
 /// HIFN return the camera framerate, in frames / sec.
 double getCameraFrameRate(void);

@@ -161,8 +161,12 @@ int CVICALLBACK SimToggle_Callback (int panel, int control, int event,
 			unsigned int simphasetoggle;
 			GetCtrlVal(panel, SimPanel_SimPhaseToggle, &simphasetoggle);
 			
+			// check if the SLM pixels simulation button is toggled
+			unsigned int SLM_pixeltoggle;
+			GetCtrlVal(panel, SimPanel_SLMpixeltoggle, &SLM_pixeltoggle); 
+			
 			// toggle the SLM simulation
-			SLM_toggleSim(simtoggle, simphasetoggle);
+			SLM_toggleSim(simtoggle, simphasetoggle, SLM_pixeltoggle);
 			
 			// check if we need to update
 			if (eventData1 != SLM_NO_UPDATE)
@@ -176,11 +180,11 @@ int CVICALLBACK SimToggle_Callback (int panel, int control, int event,
 	}
 	return 0;
 }
+				
 
 
 /// HIFN Callback function for changing the simulation saturation threshold
-int CVICALLBACK SimSaturation_Callback (int panel, int control, int event,
-		void *callbackData, int eventData1, int eventData2)
+int CVICALLBACK SimSaturation_Callback (int panel, int control, int event, void *callbackData, int eventData1, int eventData2)
 {
 	switch (event)
 	{

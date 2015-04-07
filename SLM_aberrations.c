@@ -15,8 +15,10 @@
 #include "SLM_internal.h"
 #include "SLM_Zernike.h"
 #include "SLM Camera Panel.h"
+#include "SLM.h"
 
 
+/*
 /// HIFN sets a pattern used for Shack-Hartmann aberration correction
 void SLM_SetShackHartmannPattern(double spotx, double spoty, double spotdiameter, double strayx, double strayy)
 {
@@ -34,13 +36,15 @@ void SLM_SetShackHartmannPattern(double spotx, double spoty, double spotdiameter
 		if ((dx * dx + dy * dy) < (spotdiameter * spotdiameter) / 4.0)
 		{
 			// yes, part of the spot
-			gSLMphase[k + l * gXsize] = 0;
+			gSLMphase[k + l * gXsize] = (double) (2 * PI * ((double)k / ((double)gXsize - 1)) * ((strayx) / gFocalUnitX)) 
+									  + (double) (2 * PI * ((double)l / ((double)gYsize - 1)) * ((strayy) / gFocalUnitY));	 
 		}
 		else
 		{
 			// no, not part of the spot, but part of the stray light Switched 2 Pi for 256
-			gSLMphase[k + l * gXsize] = (double) (2 * PI * (((double) k) / ((double) gXsize - 1)) * (strayx / gFocalUnitX)) 
-									  + (2 * PI * (((double) l) / ((double) gYsize - 1)) * (strayy / gFocalUnitY));
+			//gSLMphase[k + l * gXsize] = (double) (2 * PI * (((double) k) / ((double) gXsize - 1)) * (strayx / gFocalUnitX)) 
+			//+ (2 * PI * (((double) l) / ((double) gYsize - 1)) * (strayy / gFocalUnitY));
+			gSLMphase[k +l * gXsize] = 0;
 		}
 		
 	}
@@ -49,7 +53,7 @@ void SLM_SetShackHartmannPattern(double spotx, double spoty, double spotdiameter
 	gCurrentPattern = SLM_SHACKHARTMANN;
 }
 
-
+*/
 
 /*
 /// HIFN compute the position (xout, yout) in the focal plane where the light ends up that is incident on
@@ -85,3 +89,29 @@ double* fitZernikePolynomials(int NZ, double* xpos, double* ypos, double* xmeasu
 {
 	
 }	 */
+
+// Calculates the Translation at a set of (x,y) values)
+/*
+double * AbsTransX;
+double * AbsTransY;
+int[] Translationx = new int[] {957,942,927,908,894,954,830,935,925,882,952,940,928,931,879,973,932,933,905,886,978,949,926,908};
+int[] Translationy = new int[] {421,421,421,425,413,410,393,394,400,409,395,393,394,394,386,362,395,394,370,368,323,319,327,341};
+int ZeroX = 934;
+int ZeroY = 396;
+AbsTransX = (double*) alloc(AbsTransX, (5 * 5 - 1) * sizeof(int)); 
+AbsTransY = (double*) alloc(AbsTransY, (5 * 5 - 1) * sizeof(int));
+
+for (int i = 0; i < 5; i++)
+for (int j = 0; j < 5; j++)
+{
+	if (i == 5) and (j == 5)
+		continue
+		
+	AbsTransX = Translationx[i + 5 * j] - ZeroX;
+	AbsTransY = Translationy[i + 5 * j] - ZeroY;
+*/	
+
+	
+	
+
+
